@@ -2776,6 +2776,10 @@ button.swiper-pagination-bullet {
   font-weight: 300; }
 
 /* contents */
+/* login */
+.single_form_div {
+  display: flex; }
+
 /* main */
 
 /*# sourceMappingURL=style.css.map */
