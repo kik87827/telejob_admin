@@ -9,8 +9,105 @@ html:not(.touchmode){
    
 }
 .page_wrap{
-   min-height:100%; background:#F2F5FA; display:flex; flex-direction: column;
+   min-height:100vh; background:#F2F5FA; display:flex; flex-direction: column;
 }
-.header_wrap{flex:0 0 152px;}
+.header_wrap{flex:0 0 152px; display:flex; flex-direction: column;}
+.header_main_row{
+    flex:1;min-height:0; display:flex; justify-content: space-between;align-items:center;
+    .main_cols{padding-left:82px;}
+    .sub_cols{padding-right:36px;}
+}
+.toplogo{}
+.toplogo_link{
+    display:inline-block; max-width:87px;
+    img{vertical-align:top}
+}
+.top_menu_list{
+    display:flex;
+    > li{
+        
+        &:last-of-type{}
+    }
+}
+.top_menu_link{}
+.top_menu_box{}
+.header_nav_row{flex:0 0 68px;background:$primary;}
+.header_nav_list{
+    display:flex;min-height:100%;
+    > li{
+        flex:1;
+        &:last-of-type{}
+    }
+}
+.header_nav_menu{
+    display:flex;min-height:100%; align-items:center; justify-content:center; text-align:center;
+    @include font2(20px,700,1,#fff); 
+    &.active,
+    &:hover{background-color:#003482;}
+}
+
 .middle_wrap{flex:1;min-height:0;}
-.footer_wrap{flex:0 0 88px;}
+.middle_template{
+    .menu_cols{}
+    .contents_cols{}
+}
+.left_menu_box{
+    .main_row{}
+    .sub_row{}
+}
+.left_box_title{}
+.left_menu_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.left_banner_wrap{}
+.left_banner_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.left_banner_item{
+    .ico{
+        &.calculator{}
+        &.message{}
+    }
+    .banner_text{}
+}
+.contents_top_row{
+    .main_cols{}
+    .sub_cols{}
+}
+.breadcrumb_item_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.bread_home{}
+.bread_menu{}
+.bread_current{}
+.contents_title{}
+.sub_util_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.sub_util_link{}
+.sub_util_box{}
+.contents_main_row{}
+
+.footer_wrap{flex:0 0 88px; text-align:center; display:flex; flex-direction: column; justify-content:center; align-items:center}
+.footer_copy{@include font(12px,400,1,0,#0258AD);}
+
+
+.single_form_container{}
+.single_top_row{}
+.single_top_title{text-align:center;}
+.single_middle_row{}
+.single_form_box{background:#fff;}
+
+@media (max-width:1440px){
+    .header_nav_menu{
+        font-size:18px;
+    }
+}
