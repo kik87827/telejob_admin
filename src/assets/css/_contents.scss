@@ -49,7 +49,7 @@
     }
 }
 
-/* pay_history */
+/* pay_history : 결제 내역 */
 .info_col_wrap {
     display: flex; align-items: center; flex-direction: row; width: 100%; max-width: 1472px; padding: 8px 24px; margin-bottom: 16px; border-radius: 8px; background-color: #D7E2F6; box-sizing: border-box;
     * {box-sizing: border-box;}
@@ -80,9 +80,8 @@
     .info_search {width: 100%; max-width: 74px; height: 48px; margin-right: 16px; @include font2(14px,700,1.4,#fff); border-radius: 12px; background-color: $primary2;}
     .info_excel_download {width: 100%; max-width: 144px; height: 48px; @include font2(16px,700,1.5,#000); @include bgicon; background-image: url("../images/pay_history/ico_excel_download.png");}
 }
+.detail_wrap {width: 100%; max-width: 1472px; padding: 24px 16px; border-radius: 8px; background-color: #fff; box-shadow: 0 0 24px 0 rgba(0,0,0,.08); box-sizing: border-box;}
 .result_wrap {
-    width: 100%; max-width: 1472px; padding: 24px 16px; border-radius: 8px; background-color: #fff; box-shadow: 0 0 24px 0 rgba(0,0,0,.08); box-sizing: border-box;
-
     * {box-sizing: border-box;}
 
     .result_brief_list {
@@ -134,7 +133,7 @@
 }
 
 @media (max-width:$mobile){
-    .result_wrap {
+    .detail_wrap.result {
         .popup_contents_row{
             .board_paging_row{
                 margin-top:16px;
@@ -146,10 +145,13 @@
     }
 }
 @media (max-width:$mobile_size3){
-    .result_wrap {
+    .detail_wrap.result {
         .board_paging_row,
         .paging_num_list{gap:2px;}
         .btn_paging_num,
         .btn_paging_control{border-radius:5px;}
     }
 }
+
+/* company_detail : 기업회원 상세정보 */
+.detail_tb {}
