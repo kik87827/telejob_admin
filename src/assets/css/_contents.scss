@@ -14,7 +14,7 @@
         }
         .form_left_img {width: 240px; margin: 0 auto 24px;}
         .left_item_tit {min-width: 36px; @include font2(14px,500,1,#595959);}
-        .left_item_desc {@include font2(16px,500,1,#000);}
+        .left_item_desc {@include font2(16px,500,1.5,#000);}
     }
 
     .single_form_right {
@@ -35,7 +35,7 @@
         }
         .right_chkbox_area {
             display: flex; align-items: center; justify-content: right; gap: 8px; margin: 16px 0 40px;
-            > label {@include font2(14px,400,1,#000);}
+            > label {@include font2(14px,400,1.4,#000);}
         }
         .btn_check {
             appearance: none; display: inline-block; width: 24px; height: 24px; @include bgicon; background-image: url("../images/login/btn_check.png");

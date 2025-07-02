@@ -2797,7 +2797,7 @@ button.swiper-pagination-bullet {
   .single_form_div .single_form_left .left_item_desc {
     font-size: 16px;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.5;
     color: #000; }
   .single_form_div .single_form_right .right_input_area {
     width: 100%; }
@@ -2845,7 +2845,7 @@ button.swiper-pagination-bullet {
     .single_form_div .single_form_right .right_chkbox_area > label {
       font-size: 14px;
       font-weight: 400;
-      line-height: 1;
+      line-height: 1.4;
       color: #000; }
   .single_form_div .single_form_right .btn_check {
     -webkit-appearance: none;
