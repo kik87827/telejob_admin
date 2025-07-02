@@ -1,7 +1,12 @@
 /* contents */
 /* login */
+.admin_body.login {background: #F2F5FA;}
+.page_wrap.max_1280 {max-width: 1280px; min-width: initial; margin: 0 auto;}
+.page_wrap.max_1760 {max-width: 1760px; min-width: initial; margin: 0 auto;}
 .single_form_div {
-    display: flex;
+    display: flex; gap: 24px;
+
+    * {box-sizing: border-box;}
 
     .single_form_left,
     .single_form_right {flex: 1; min-width: 0;}
@@ -12,7 +17,7 @@
             > li:not(:last-child) {margin-bottom: 4px;}
         }
         .form_left_img {width: 240px; margin: 0 auto 24px;}
-        .left_item_tit {min-width: 36px; @include font2(14px,500,1,#595959);}
+        .left_item_tit {display: inline-block; min-width: 36px; @include font2(14px,500,1.4,#595959);}
         .left_item_desc {@include font2(16px,500,1.5,#000);}
     }
 
@@ -21,14 +26,14 @@
         .right_input_area {
             width: 100%;
             &:first-child {margin-bottom: 16px;}
-            label {display: block; margin-bottom: 8px; font-size: 14px; line-height: 20px;}
+            label {display: block; margin-bottom: 8px; @include font2(14px,500,1.4,#000);}
         }
         .form_right_input {
             position: relative; max-width: 302px; box-sizing: border-box;
             input {width: 100%; height: 48px; padding-left: 13px; @include font2(14px,500,48px,#AAA); border-radius: 8px;}
         }
         .form_btn {
-            display: block; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 16px; height: 16px; @include bgicon;
+            display: block; position: absolute; top: 50%; right: 13px; transform: translateY(-50%); width: 16px; height: 16px; @include bgicon;
             &.form_btn_clear {background-image: url("../images/login/btn_clear_input.png");}
             &.form_btn_show {background-image: url("../images/login/btn_show_input.png");}
         }
@@ -40,19 +45,19 @@
             display: inline-block; width: 24px; height: 24px; @include bgicon; background-image: url("../images/login/btn_check.png"); appearance: none;
             &:checked {background-image: url("../images/login/btn_check_active.png");}
         }
-        .form_btn_submit {width: 302px; height: 56px1; border-radius: 26px; @include font2(20px,700,56px,#fff); background-color: $primary2;}
+        .form_btn_submit {width: 100%; max-width: 302px; height: 56px; border-radius: 26px; @include font2(20px,700,56px,#fff); background-color: $primary2;}
     }
 }
 
 /* pay_history */
 .info_col_wrap {
-    display: flex; align-items: center; flex-direction: row; width: 100%; max-width: 1472px; padding: 8px 24px; margin-bottom: 16px; border-radius: 8px; background-color: #D7E2F6;
-
-    input {display: inline-block; width: 100%; padding-left: 13px; height: 48px; border-radius: 8px; background-color: #fff; border: 0;}
+    display: flex; align-items: center; flex-direction: row; width: 100%; max-width: 1472px; padding: 8px 24px; margin-bottom: 16px; border-radius: 8px; background-color: #D7E2F6; box-sizing: border-box;
+    * {box-sizing: border-box;}
+    input {display: inline-block; width: 100%; padding-left: 13px; height: 48px; border-radius: 8px; box-sizing: border-box; background-color: #fff; border: 0;}
     .info_bg_ico:after {content: ''; position: absolute; top: 50%; right: 13px; transform: translateY(-50%); width: 16px; height: 16px; @include bgicon;}    
     .info_text_wrap {
-        display: flex; align-items: center; gap: 8px;
-        &:not(:last-child) {margin-right: 24px;}
+        display: flex; align-items: center; gap: 8px; margin-right: 24px;
+        &.last {margin-right: 4px;}
     }
     .info_text_label {@include font2(16px,400,1.5,#005AAB);}
     .info_text_input {
@@ -62,14 +67,89 @@
     .info_select_wrap {
         position: relative; display: inline-block; width: 100%; max-width: 113px;
         &:not(last-child) {margin-right: 4px;}
-        &:after {background-image: url("../images/login/ico_opt_arrow.png"); pointer-events: none;}
+        &:after {background-image: url("../images/pay_history/ico_opt_arrow.png"); pointer-events: none;}
     }
     .pay_opt_list {display: inline-block; width: 100%; padding-left: 13px; height: 48px; @include font2(16px,400,1.5,#000); border-radius: 8px; background-color: #fff; border: 0; appearance: none;}
-    .info_date_wrap {display: flex; align-items: center; gap: 4px;}
+    .info_date_wrap {display: flex; align-items: center; gap: 4px; margin-right: 16px;}
     .info_date_item {
         position: relative; display: inline-block; width: 100%; max-width: 138px;
-        &:after {background-image: url("../images/login/ico_calendar.png");}
+        &:after {background-image: url("../images/pay_history/ico_calendar.png");}
         input {@include font2(16px,400,1.5,#000);}
     }
     .date_flow {display: inline-block; @include font2(16px,400,1.5,#000);}
+    .info_search {width: 100%; max-width: 74px; height: 48px; margin-right: 16px; @include font2(14px,700,1.4,#fff); border-radius: 12px; background-color: $primary2;}
+    .info_excel_download {width: 100%; max-width: 144px; height: 48px; @include font2(16px,700,1.5,#000); @include bgicon; background-image: url("../images/pay_history/ico_excel_download.png");}
+}
+.result_wrap {
+    width: 100%; max-width: 1472px; padding: 24px 16px; border-radius: 8px; background-color: #fff; box-shadow: 0 0 24px 0 rgba(0,0,0,.08); box-sizing: border-box;
+
+    * {box-sizing: border-box;}
+
+    .result_brief_list {
+        display: flex; align-items: center; margin-bottom: 24px;
+        > li {
+            position: relative; width: calc(100% / 6);
+            &:not(:last-child):after {content: ''; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 1px; height: 60px; background-color: #E6E6E6;}
+        }
+    }
+    .result_brief_item {
+        padding: 24px 0; text-align: center;
+    }
+    .result_brief_tit {margin-bottom: 8px; @include font2(16px,500,1.5,#005AAB);}
+    .result_brief_desc {
+        @include font2(16px,500,1.5,#000);
+        .num {
+            @include font2(30px,700,1.2,#000);
+            &.gray {color: #AAA;}
+            &.red {color: #B5000F;}
+        }
+    }
+    .result_tb {
+        width: 100%; border-top: 2px solid #BDC5D1; text-align: center;
+        thead {
+            th {padding: 8px 0; @include font2(14px,400,1.4,#595959); background-color: #F8F8F8; border-bottom: 1px solid #E6E6E6;}
+        }
+        tbody {
+            td {padding: 16px 0; @include font2(16px,400,1.6,#000); border-bottom: 1px solid #E6E6E6;}
+        }
+    }
+    .board_paging_row{display:flex; justify-content: center; align-items:center; text-align:center; gap:5px; margin-top:48px;}
+    .btn_paging_control{
+        width:32px;height:32px;display:flex; align-items:center; justify-content: center; text-align:center; border:1px solid #F1F1F1; border-radius:8px; @include bgicon_center(16px auto); box-sizing:border-box;
+        &.first{background-image:url("../images/ico_paging_first.png");}
+        &.prev{background-image:url("../images/ico_paging_prev.png");}
+        &.next{background-image:url("../images/ico_paging_next.png");}
+        &.last{background-image:url("../images/ico_paging_last.png");}
+    }
+    .paging_num_list{
+        display:flex; justify-content: center; align-items:center; gap:5px;
+        > li{}
+    }
+    .btn_paging_num{
+        width:32px;height:32px;display:flex; align-items:center; justify-content: center; text-align:center; border-radius:8px; border:1px solid #F1F1F1;
+        box-sizing:border-box; @include font(13px,500,1,0,#333333);
+        &.active{color:#fff;background-color:#0B51C5; border-color:#0B51C5;}
+        &.clamp_text{}
+    }
+}
+
+@media (max-width:$mobile){
+    .result_wrap {
+        .popup_contents_row{
+            .board_paging_row{
+                margin-top:16px;
+            }
+        }
+        .board_paging_row{margin-top:24px;}
+        .board_paging_row,
+        .paging_num_list{gap:3px;}
+    }
+}
+@media (max-width:$mobile_size3){
+    .result_wrap {
+        .board_paging_row,
+        .paging_num_list{gap:2px;}
+        .btn_paging_num,
+        .btn_paging_control{border-radius:5px;}
+    }
 }

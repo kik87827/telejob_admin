@@ -120,8 +120,8 @@
 								<li>
 									<a href="#" class="sub_util_link">전화결제(다우페이)</a>
 								</li>
-								<li><a href="#" class="sub_util_box">로그인</a></li>
-								<li><a href="#" class="sub_util_box">수정</a></li>
+								<!-- <li><a href="#" class="sub_util_box">로그인</a></li>
+                  <li><a href="#" class="sub_util_box">수정</a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -138,7 +138,7 @@
 								</label>
 								<input type="text" id="info_company" class="info_text_input" placeholder="회사명" />
 							</div>
-							<div class="info_text_wrap">
+							<div class="info_text_wrap last">
 								<label for="info_name" class="info_text_label">
 									입금자명
 								</label>
@@ -169,6 +169,147 @@
 								<span class="date_flow">~</span>
 								<div class="info_date_item info_bg_ico">
 									<input type="text" id="datepicker" value="2025.05.07" />
+								</div>
+							</div>
+							<button type="button" class="info_search">검색</button>
+							<button type="button" class="info_excel_download">
+								엑셀 다운로드
+							</button>
+						</div>
+
+						<div class="result_wrap">
+							<ul class="result_brief_list">
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 카드결제</dt>
+										<dd class="result_brief_desc">
+											<strong class="num">0</strong>
+											건
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 계좌이체</dt>
+										<dd class="result_brief_desc">
+											<strong class="num">0</strong>
+											건
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 무통장 입금</dt>
+										<dd class="result_brief_desc">
+											<strong class="num">0</strong>
+											건
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 취소 금액</dt>
+										<dd class="result_brief_desc gray">
+											<strong class="num">0</strong>
+											원
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">입금확인 중</dt>
+										<dd class="result_brief_desc">
+											<strong class="num">20,942,400</strong>
+											원
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 결제합계</dt>
+										<dd class="result_brief_desc">
+											<strong class="num red">801,232,600</strong>
+											원
+										</dd>
+									</dl>
+								</li>
+							</ul>
+							<div class="result_tb_wrap">
+								<table class="result_tb">
+									<colgroup>
+										<col style="max-width: 80px" />
+										<col style="max-width: 140px" />
+										<col style="max-width: 140px" />
+										<col style="max-width: 200px" />
+										<col style="max-width: 580px" />
+										<col style="max-width: 180px" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>공고번호</th>
+											<th>서비스명</th>
+											<th>결제일</th>
+											<th>서비스 기간</th>
+											<th>기업명</th>
+											<th>채용공고</th>
+											<th>채용공고 연결</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>-</td>
+											<td>SKY배너</td>
+											<td>2025.05.28</td>
+											<td>2025.05.28 ~ 2025.06.27</td>
+											<td>메리츠화재</td>
+											<td>위촉당월 평균급여 4배지급 합니다.</td>
+											<td>
+												<a href="#" class="btn_result_link" title="해당 공고 페이지 이동">
+													공고선택
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>91038</td>
+											<td>프리미엄스페셜</td>
+											<td>2025.03.12</td>
+											<td>2025.03.12 ~ 2025.04.11</td>
+											<td>메리츠화재</td>
+											<td>위촉당월 평균급여 4배지급 합니다.</td>
+											<td>
+												<a href="#" class="btn_result_link" title="해당 공고 페이지 이동">
+													공고선택
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="board_paging_row">
+									<a href="javascript:;" class="btn_paging_control first"></a>
+									<a href="javascript:;" class="btn_paging_control prev"></a>
+									<ul class="paging_num_list">
+										<li>
+											<a href="javascript:;" class="btn_paging_num active">
+												1
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="btn_paging_num">2</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="btn_paging_num">3</a>
+										</li>
+										<!-- <li><span class="btn_paging_num clamp_text">...</span></li> -->
+										<li>
+											<a href="javascript:;" class="btn_paging_num">4</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="btn_paging_num">5</a>
+										</li>
+									</ul>
+									<a href="javascript:;" class="btn_paging_control next"></a>
+									<a href="javascript:;" class="btn_paging_control last"></a>
 								</div>
 							</div>
 						</div>
