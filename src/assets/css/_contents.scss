@@ -37,25 +37,39 @@
             > label {@include font2(14px,400,1.4,#000);}
         }
         .btn_check {
-            appearance: none; display: inline-block; width: 24px; height: 24px; @include bgicon; background-image: url("../images/login/btn_check.png");
+            display: inline-block; width: 24px; height: 24px; @include bgicon; background-image: url("../images/login/btn_check.png"); appearance: none;
             &:checked {background-image: url("../images/login/btn_check_active.png");}
         }
-        .form_btn_submit {width: 302px; height: 56px; border-radius: 26px; @include font2(20px,700,56px,#fff); background-color: $primary2;}
+        .form_btn_submit {width: 302px; height: 56px1; border-radius: 26px; @include font2(20px,700,56px,#fff); background-color: $primary2;}
     }
-
 }
 
 /* pay_history */
 .info_col_wrap {
     display: flex; align-items: center; flex-direction: row; width: 100%; max-width: 1472px; padding: 8px 24px; margin-bottom: 16px; border-radius: 8px; background-color: #D7E2F6;
-    
+
+    input {display: inline-block; width: 100%; padding-left: 13px; height: 48px; border-radius: 8px; background-color: #fff; border: 0;}
+    .info_bg_ico:after {content: ''; position: absolute; top: 50%; right: 13px; transform: translateY(-50%); width: 16px; height: 16px; @include bgicon;}    
     .info_text_wrap {
         display: flex; align-items: center; gap: 8px;
         &:not(:last-child) {margin-right: 24px;}
     }
     .info_text_label {@include font2(16px,400,1.5,#005AAB);}
     .info_text_input {
-        max-width: 140px; padding-left: 13px; height: 48px; @include font2(16px,400,1.5,#AAA); border-radius: 8px; background-color: #fff;
+        max-width: 140px; @include font2(16px,400,1.5,#AAA);
         &.short {max-width: 120px;}
     }
+    .info_select_wrap {
+        position: relative; display: inline-block; width: 100%; max-width: 113px;
+        &:not(last-child) {margin-right: 4px;}
+        &:after {background-image: url("../images/login/ico_opt_arrow.png"); pointer-events: none;}
+    }
+    .pay_opt_list {display: inline-block; width: 100%; padding-left: 13px; height: 48px; @include font2(16px,400,1.5,#000); border-radius: 8px; background-color: #fff; border: 0; appearance: none;}
+    .info_date_wrap {display: flex; align-items: center; gap: 4px;}
+    .info_date_item {
+        position: relative; display: inline-block; width: 100%; max-width: 138px;
+        &:after {background-image: url("../images/login/ico_calendar.png");}
+        input {@include font2(16px,400,1.5,#000);}
+    }
+    .date_flow {display: inline-block; @include font2(16px,400,1.5,#000);}
 }

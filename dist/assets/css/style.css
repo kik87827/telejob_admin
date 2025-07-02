@@ -2848,21 +2848,21 @@ button.swiper-pagination-bullet {
       line-height: 1.4;
       color: #000; }
   .single_form_div .single_form_right .btn_check {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
     display: inline-block;
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: 0 0;
-    background-image: url("../images/login/btn_check.png"); }
+    background-image: url("../images/login/btn_check.png");
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
     .single_form_div .single_form_right .btn_check:checked {
       background-image: url("../images/login/btn_check_active.png"); }
   .single_form_div .single_form_right .form_btn_submit {
     width: 302px;
-    height: 56px;
+    height: 56px1;
     border-radius: 26px;
     font-size: 20px;
     font-weight: 700;
@@ -2881,6 +2881,25 @@ button.swiper-pagination-bullet {
   margin-bottom: 16px;
   border-radius: 8px;
   background-color: #D7E2F6; }
+  .info_col_wrap input {
+    display: inline-block;
+    width: 100%;
+    padding-left: 13px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 0; }
+  .info_col_wrap .info_bg_ico:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0; }
   .info_col_wrap .info_text_wrap {
     display: flex;
     align-items: center;
@@ -2894,16 +2913,59 @@ button.swiper-pagination-bullet {
     color: #005AAB; }
   .info_col_wrap .info_text_input {
     max-width: 140px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #AAA; }
+    .info_col_wrap .info_text_input.short {
+      max-width: 120px; }
+  .info_col_wrap .info_select_wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 113px; }
+    .info_col_wrap .info_select_wrap:not(last-child) {
+      margin-right: 4px; }
+    .info_col_wrap .info_select_wrap:after {
+      background-image: url("../images/login/ico_opt_arrow.png");
+      pointer-events: none; }
+  .info_col_wrap .pay_opt_list {
+    display: inline-block;
+    width: 100%;
     padding-left: 13px;
     height: 48px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #AAA;
+    color: #000;
     border-radius: 8px;
-    background-color: #fff; }
-    .info_col_wrap .info_text_input.short {
-      max-width: 120px; }
+    background-color: #fff;
+    border: 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+  .info_col_wrap .info_date_wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px; }
+  .info_col_wrap .info_date_item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 138px; }
+    .info_col_wrap .info_date_item:after {
+      background-image: url("../images/login/ico_calendar.png"); }
+    .info_col_wrap .info_date_item input {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #000; }
+  .info_col_wrap .date_flow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000; }
 
 /* main */
 
