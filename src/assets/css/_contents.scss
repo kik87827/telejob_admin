@@ -42,4 +42,20 @@
         }
         .form_btn_submit {width: 302px; height: 56px; border-radius: 26px; @include font2(20px,700,56px,#fff); background-color: $primary2;}
     }
+
+}
+
+/* pay_history */
+.info_col_wrap {
+    display: flex; align-items: center; flex-direction: row; width: 100%; max-width: 1472px; padding: 8px 24px; margin-bottom: 16px; border-radius: 8px; background-color: #D7E2F6;
+    
+    .info_text_wrap {
+        display: flex; align-items: center; gap: 8px;
+        &:not(:last-child) {margin-right: 24px;}
+    }
+    .info_text_label {@include font2(16px,400,1.5,#005AAB);}
+    .info_text_input {
+        max-width: 140px; padding-left: 13px; height: 48px; @include font2(16px,400,1.5,#AAA); border-radius: 8px; background-color: #fff;
+        &.short {max-width: 120px;}
+    }
 }
