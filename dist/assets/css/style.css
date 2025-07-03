@@ -22,7 +22,8 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, address, im
   margin: 0;
   padding: 0;
   border: 0;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  box-sizing: border-box; }
 
 header, footer, section, article, aside, nav, main, details, menu, figure, figcaption, video {
   display: block; }
@@ -2776,7 +2777,7 @@ button.swiper-pagination-bullet {
   font-weight: 300; }
 
 /* contents */
-/* login */
+/* common */
 .admin_body.login {
   background: #F2F5FA; }
 
@@ -2790,11 +2791,80 @@ button.swiper-pagination-bullet {
   min-width: initial;
   margin: 0 auto; }
 
+.btn_text {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  padding-left: 13px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #AAA;
+  border-radius: 8px !important; }
+  .btn_text.btn_text_b {
+    color: #000; }
+
+.btn_select_wrap {
+  position: relative; }
+  .btn_select_wrap:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-image: url("../images/pay_history/ico_opt_arrow.png");
+    pointer-events: none; }
+
+.btn_select {
+  display: inline-block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  width: 100%;
+  height: 48px;
+  padding-left: 13px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #AAA;
+  border-radius: 8px !important; }
+
+input.props_dom {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  background-image: url("../images/ico_checkbox_22.png");
+  border: 1px solid #DBDBDB;
+  border-radius: 4px;
+  box-sizing: content-box; }
+  input.props_dom[type="radio"] {
+    border-radius: 100%;
+    background-image: url("../images/ico_radio.png"); }
+    input.props_dom[type="radio"]:checked {
+      border-color: #4285F4; }
+  input.props_dom:checked {
+    background-position: 0 100%; }
+
+em {
+  font-style: normal; }
+
+/* login */
 .single_form_div {
   display: flex;
   gap: 24px; }
-  .single_form_div * {
-    box-sizing: border-box; }
   .single_form_div .single_form_left,
   .single_form_div .single_form_right {
     flex: 1;
@@ -2829,8 +2899,7 @@ button.swiper-pagination-bullet {
       color: #000; }
   .single_form_div .single_form_right .form_right_input {
     position: relative;
-    max-width: 302px;
-    box-sizing: border-box; }
+    max-width: 302px; }
     .single_form_div .single_form_right .form_right_input input {
       width: 100%;
       height: 48px;
@@ -2851,9 +2920,9 @@ button.swiper-pagination-bullet {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: 0 0; }
-    .single_form_div .single_form_right .form_btn.form_btn_clear {
+    .single_form_div .single_form_right .form_btn.btn_clear {
       background-image: url("../images/login/btn_clear_input.png"); }
-    .single_form_div .single_form_right .form_btn.form_btn_show {
+    .single_form_div .single_form_right .form_btn.btn_show {
       background-image: url("../images/login/btn_show_input.png"); }
   .single_form_div .single_form_right .right_chkbox_area {
     display: flex;
@@ -2900,17 +2969,13 @@ button.swiper-pagination-bullet {
   padding: 8px 24px;
   margin-bottom: 16px;
   border-radius: 8px;
-  background-color: #D7E2F6;
-  box-sizing: border-box; }
-  .info_col_wrap * {
-    box-sizing: border-box; }
+  background-color: #D7E2F6; }
   .info_col_wrap input {
     display: inline-block;
     width: 100%;
     padding-left: 13px;
     height: 48px;
     border-radius: 8px;
-    box-sizing: border-box;
     background-color: #fff;
     border: 0; }
   .info_col_wrap .info_bg_ico:after {
@@ -3022,20 +3087,16 @@ button.swiper-pagination-bullet {
   padding: 24px 16px;
   border-radius: 8px;
   background-color: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
-  box-sizing: border-box; }
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08); }
 
-.result_wrap * {
-  box-sizing: border-box; }
-
-.result_wrap .result_brief_list {
+.result_brief_list {
   display: flex;
   align-items: center;
   margin-bottom: 24px; }
-  .result_wrap .result_brief_list > li {
+  .result_brief_list > li {
     position: relative;
     width: calc(100% / 6); }
-    .result_wrap .result_brief_list > li:not(:last-child):after {
+    .result_brief_list > li:not(:last-child):after {
       content: '';
       position: absolute;
       top: 50%;
@@ -3045,53 +3106,88 @@ button.swiper-pagination-bullet {
       height: 60px;
       background-color: #E6E6E6; }
 
-.result_wrap .result_brief_item {
+.result_brief_item {
   padding: 24px 0;
   text-align: center; }
 
-.result_wrap .result_brief_tit {
+.result_brief_tit {
   margin-bottom: 8px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   color: #005AAB; }
 
-.result_wrap .result_brief_desc {
+.result_brief_desc {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   color: #000; }
-  .result_wrap .result_brief_desc .num {
+  .result_brief_desc .num {
     font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
     color: #000; }
-    .result_wrap .result_brief_desc .num.gray {
+    .result_brief_desc .num.gray {
       color: #AAA; }
-    .result_wrap .result_brief_desc .num.red {
+    .result_brief_desc .num.red {
       color: #B5000F; }
 
-.result_wrap .result_tb {
+/* 결과 테이블 */
+.result_tb {
   width: 100%;
   border-top: 2px solid #BDC5D1;
   text-align: center; }
-  .result_wrap .result_tb thead th {
-    padding: 8px 0;
+  .result_tb thead th {
+    padding: 8px 18px;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
     color: #595959;
     background-color: #F8F8F8;
     border-bottom: 1px solid #E6E6E6; }
-  .result_wrap .result_tb tbody td {
-    padding: 16px 0;
+  .result_tb tbody td {
+    padding: 16px 18px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
     color: #000;
     border-bottom: 1px solid #E6E6E6; }
+    .result_tb tbody td:nth-child(6) {
+      padding-left: 16px;
+      text-align: left; }
+  .result_tb .btn_result_link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 100px;
+    height: 32px;
+    padding-left: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 26px; }
+    .result_tb .btn_result_link:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: 0 0;
+      background-image: url("../images/ico_link.png"); }
+    .result_tb .btn_result_link:active, .result_tb .btn_result_link:hover, .result_tb .btn_result_link:focus {
+      color: #0053C2;
+      border-color: #0053C2; }
+      .result_tb .btn_result_link:active:after, .result_tb .btn_result_link:hover:after, .result_tb .btn_result_link:focus:after {
+        background-image: url("../images/ico_link_active.png"); }
 
-.result_wrap .board_paging_row {
+/* 페이징 */
+.board_paging_row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3099,7 +3195,7 @@ button.swiper-pagination-bullet {
   gap: 5px;
   margin-top: 48px; }
 
-.result_wrap .btn_paging_control {
+.btn_paging_control {
   width: 32px;
   height: 32px;
   display: flex;
@@ -3110,24 +3206,23 @@ button.swiper-pagination-bullet {
   border-radius: 8px;
   background-repeat: no-repeat;
   background-size: 16px auto;
-  background-position: 50% 50%;
-  box-sizing: border-box; }
-  .result_wrap .btn_paging_control.first {
+  background-position: 50% 50%; }
+  .btn_paging_control.first {
     background-image: url("../images/ico_paging_first.png"); }
-  .result_wrap .btn_paging_control.prev {
+  .btn_paging_control.prev {
     background-image: url("../images/ico_paging_prev.png"); }
-  .result_wrap .btn_paging_control.next {
+  .btn_paging_control.next {
     background-image: url("../images/ico_paging_next.png"); }
-  .result_wrap .btn_paging_control.last {
+  .btn_paging_control.last {
     background-image: url("../images/ico_paging_last.png"); }
 
-.result_wrap .paging_num_list {
+.paging_num_list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px; }
 
-.result_wrap .btn_paging_num {
+.btn_paging_num {
   width: 32px;
   height: 32px;
   display: flex;
@@ -3136,35 +3231,207 @@ button.swiper-pagination-bullet {
   text-align: center;
   border-radius: 8px;
   border: 1px solid #F1F1F1;
-  box-sizing: border-box;
   font-size: 13px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
   color: #333333; }
-  .result_wrap .btn_paging_num.active {
+  .btn_paging_num.active {
     color: #fff;
     background-color: #0B51C5;
     border-color: #0B51C5; }
 
-@media (max-width: 767px) {
-  .detail_wrap.result .popup_contents_row .board_paging_row {
-    margin-top: 16px; }
-  .detail_wrap.result .board_paging_row {
+/* company_detail : 기업회원 상세정보 */
+.detail_wrap_tit {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000; }
+  .detail_wrap_tit:not(:first-child) {
     margin-top: 24px; }
-  .detail_wrap.result .board_paging_row,
-  .detail_wrap.result .paging_num_list {
+
+/* 상세 테이블 */
+.detail_tb_wrap {
+  width: 100%;
+  border-top: 2px solid #005AAB; }
+
+.detail_tb {
+  table-layout: fixed;
+  word-break: break-all;
+  /* 파일 업로드 */ }
+  .detail_tb th,
+  .detail_tb td {
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    border-bottom: 1px solid rgba(0, 90, 171, 0.1);
+    text-align: left; }
+    .detail_tb th.ptb4,
+    .detail_tb td.ptb4 {
+      padding: 4px 16px; }
+    .detail_tb th.ptb12,
+    .detail_tb td.ptb12 {
+      padding: 12px 16px; }
+    .detail_tb th.ptb24,
+    .detail_tb td.ptb24 {
+      padding: 24px 16px; }
+  .detail_tb th {
+    background-color: #EDF2FB;
+    color: #005AAB; }
+    .detail_tb th.detail_tb_logo {
+      background-color: #fff; }
+  .detail_tb .tb_logo_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .detail_tb .btn_text {
+    border: 1px solid #E6E6E6; }
+  .detail_tb .btn_select_wrap {
+    max-width: 213px; }
+  .detail_tb .tb_input_status {
+    width: 100%;
+    border: 1px solid #E6E6E6; }
+  .detail_tb .tb_adress_top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px; }
+  .detail_tb .tb_adress_btm {
+    display: flex;
+    align-items: center;
+    gap: 4px; }
+  .detail_tb .tb_adress_num {
+    max-width: 112px; }
+  .detail_tb .tb_adress_search {
+    height: 48px;
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #595959;
+    border-radius: 26px;
+    border: 1px solid #E6E6E6;
+    background-color: #F8F8F8; }
+  .detail_tb .tb_adress_normal,
+  .detail_tb .tb_adress_detail {
+    max-width: 612px; }
+  .detail_tb .tb_comp_info:first-child {
+    margin-bottom: 16px; }
+  .detail_tb .tb_comp_info dt {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #595959; }
+  .detail_tb .tb_comp_info dd {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000; }
+  .detail_tb .tb_file_top,
+  .detail_tb .tb_file_btm {
+    display: flex;
+    align-items: center;
+    gap: 16px; }
+  .detail_tb .tb_file_top {
+    margin-bottom: 16px; }
+  .detail_tb .tb_file_download {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #005AAB;
+    text-decoration: underline; }
+  .detail_tb .tb_chkbox_area {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 8px; }
+    .detail_tb .tb_chkbox_area > label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #000; }
+  .detail_tb .tb_file_wrap {
+    position: relative;
+    max-width: 612px; }
+  .detail_tb .tb_file_input {
+    width: 100%;
+    max-width: 612px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #AAA; }
+  .detail_tb .tb_file_amount {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-family: 'Spoqa','NotoSans-Regular',dotum;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #595959; }
+    .detail_tb .tb_file_amount > em {
+      color: #000; }
+  .detail_tb .tb_file_btn {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%); }
+  .detail_tb .tb_file_noti {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #595959; }
+  .detail_tb .btn_check {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-image: url("../images/login/btn_check.png");
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+    .detail_tb .btn_check:checked {
+      background-image: url("../images/login/btn_check_active.png"); }
+  .detail_tb .num {
+    font-family: 'Spoqa','NotoSans-Regular',dotum; }
+  .detail_tb .smtxt {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #595959; }
+
+/* company_detail_02 : 기업회원 상세정보 */
+.manage_chk {
+  display: flex;
+  align-items: center; }
+  .manage_chk > div {
+    display: flex;
+    align-items: center; }
+
+@media (max-width: 767px) {
+  .detail_wrap .popup_contents_row .board_paging_row {
+    margin-top: 16px; }
+  .detail_wrap .board_paging_row {
+    margin-top: 24px; }
+  .detail_wrap .board_paging_row,
+  .detail_wrap .paging_num_list {
     gap: 3px; } }
 
 @media (max-width: 374px) {
-  .detail_wrap.result .board_paging_row,
-  .detail_wrap.result .paging_num_list {
+  .detail_wrap .board_paging_row,
+  .detail_wrap .paging_num_list {
     gap: 2px; }
-  .detail_wrap.result .btn_paging_num,
-  .detail_wrap.result .btn_paging_control {
+  .detail_wrap .btn_paging_num,
+  .detail_wrap .btn_paging_control {
     border-radius: 5px; } }
 
-/* company_detail : 기업회원 상세정보 */
 /* main */
 
 /*# sourceMappingURL=style.css.map */
