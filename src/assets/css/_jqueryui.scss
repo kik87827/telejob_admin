@@ -319,7 +319,7 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
-	padding: .2em 0;
+	padding: 8px 0;
 }
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
@@ -373,7 +373,10 @@ button.ui-button::-moz-focus-inner {
 	margin: 0 0 .4em;
 }
 .ui-datepicker th {
-	padding: .7em .3em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
 	text-align: center;
 	font-weight: bold;
 	border: 0;
@@ -928,6 +931,9 @@ body .ui-tooltip {
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid #c5c5c5;
 	background: #f6f6f6;
 	font-weight: normal;
@@ -941,7 +947,7 @@ a:link.ui-button,
 a:visited.ui-button,
 .ui-button {
 	color: #454545;
-	text-decoration: none;
+	text-decoration: none;	
 }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
