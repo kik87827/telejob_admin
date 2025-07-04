@@ -1,5 +1,6 @@
 /* contents */
 /* common */
+em {font-style: normal;}
 .admin_body.login {background: #F2F5FA;}
 .page_wrap.max_1280 {max-width: 1280px; min-width: initial; margin: 0 auto;}
 .page_wrap.max_1760 {max-width: 1760px; min-width: initial; margin: 0 auto;}
@@ -14,13 +15,10 @@
 }
 .btn_select {display: inline-block; appearance: none; position: relative; width: 100%; height: 48px; padding-left: 13px; @include font2(14px,500,48px,#AAA); border-radius: 8px !important;}
 input.props_dom{
-    appearance: none; width:22px; height:22px; flex:0 0 22px; cursor: pointer; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #DBDBDB; border-radius:4px; box-sizing:content-box;
-    &[type="radio"]{border-radius:100%; background-image:url("../images/ico_radio.png");
-        &:checked{border-color:#4285F4;}
-    }
+    appearance: none; width:22px; height:22px; flex:0 0 22px; cursor: pointer; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #BDC5D1; border-radius:4px; box-sizing:content-box;
+    &[type="radio"]{border-radius:100%; background-image:url("../images/ico_radio.png");}
     &:checked{background-position:0 100%;}
 }
-em {font-style: normal;}
 
 /* login */
 .single_form_div {
@@ -281,23 +279,43 @@ select.form_select{
     &.btn_reply {background-color: #0B51C5; color: #fff;}
 }
 
-@media (max-width:$mobile){
-    .detail_wrap {
-        .popup_contents_row{
-            .board_paging_row{
-                margin-top:16px;
-            }
-        }
-        .board_paging_row{margin-top:24px;}
-        .board_paging_row,
-        .paging_num_list{gap:3px;}
+/* popup : 서비스 금액 수정 */
+.popup_serv_head {
+    width: 100%; display: flex; align-items: center; padding: 8px 0; @include font2(14px,400,1.4,#000); text-align: center; border-top: 1px solid #E6E6E6; border-bottom: 1px solid #E6E6E6;
+    > div {flex: 1; min-width: 0;}
+}
+.popup_serv_list {width: 100%; @include font2(16px,400,1.5,#000);}
+.popup_serv_item {display: flex; align-items: center; flex: 1; min-width: 0; justify-content: space-between; padding: 12px 0;}
+.popup_serv_price {
+    position: relative; display: flex; width: 100%; max-width: 198px; height: 48px;
+    input {width: 100%; height: 100%; padding: 12px 50px 12px 13px; border-radius: 8px; border: 1px solid #E6E6E6;}
+    > span {position: absolute; top: 50%; right: 13px; transform: translateY(-50%); display: inline-block; @include font2(16px,400,1.5,#595959);}
+}
+.popup_serv_total {
+    display: flex; align-items: center; justify-content: space-between; padding: 24px 12px; background-color: #F8F8F8;
+    .serv_total_tit {@include font2(16px,400,1.5,#000);}
+    .serv_total_txt {
+        @include font2(14px,400,1.4,#595959);
+        em {@include font2(24px,700,1.2,#B5000F);}
     }
 }
+/* popup : 무료방식 선택 */
+.popup_radio_list {
+    width: 100%; display: flex; align-items: center; flex-wrap: wrap; border-top: 2px solid #BDC5D1; border-bottom: 1px solid #BDC5D1; padding: 8px 0;
+    > li {width: 50%; min-width: 0; padding: 8px 0;}
+    .popup_radio_item {display: flex; align-items: center; gap: 8px;}
+    .popup_radio_label {@include font2(14px,400,1.4,#000);}
+}
+
+
+@media (max-width:$mobile){
+    .board_paging_row{margin-top:24px;}
+    .board_paging_row,
+    .paging_num_list{gap:3px;}
+}
 @media (max-width:$mobile_size3){
-    .detail_wrap {
-        .board_paging_row,
-        .paging_num_list{gap:2px;}
-        .btn_paging_num,
-        .btn_paging_control{border-radius:5px;}
-    }
+    .board_paging_row,
+    .paging_num_list{gap:2px;}
+    .btn_paging_num,
+    .btn_paging_control{border-radius:5px;}
 }

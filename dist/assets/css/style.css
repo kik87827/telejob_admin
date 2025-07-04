@@ -2778,6 +2778,9 @@ button.swiper-pagination-bullet {
 
 /* contents */
 /* common */
+em {
+  font-style: normal; }
+
 .admin_body.login {
   background: #F2F5FA; }
 
@@ -2855,19 +2858,14 @@ input.props_dom {
   background-size: 100% auto;
   background-position: 0 0;
   background-image: url("../images/ico_checkbox_22.png");
-  border: 1px solid #DBDBDB;
+  border: 1px solid #BDC5D1;
   border-radius: 4px;
   box-sizing: content-box; }
   input.props_dom[type="radio"] {
     border-radius: 100%;
     background-image: url("../images/ico_radio.png"); }
-    input.props_dom[type="radio"]:checked {
-      border-color: #4285F4; }
   input.props_dom:checked {
     background-position: 0 100%; }
-
-em {
-  font-style: normal; }
 
 /* login */
 .single_form_div {
@@ -3655,21 +3653,119 @@ select.form_select {
     background-color: #0B51C5;
     color: #fff; }
 
+/* popup : 서비스 금액 수정 */
+.popup_serv_head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+  text-align: center;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6; }
+  .popup_serv_head > div {
+    flex: 1;
+    min-width: 0; }
+
+.popup_serv_list {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000; }
+
+.popup_serv_item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  justify-content: space-between;
+  padding: 12px 0; }
+
+.popup_serv_price {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 198px;
+  height: 48px; }
+  .popup_serv_price input {
+    width: 100%;
+    height: 100%;
+    padding: 12px 50px 12px 13px;
+    border-radius: 8px;
+    border: 1px solid #E6E6E6; }
+  .popup_serv_price > span {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #595959; }
+
+.popup_serv_total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 12px;
+  background-color: #F8F8F8; }
+  .popup_serv_total .serv_total_tit {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000; }
+  .popup_serv_total .serv_total_txt {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #595959; }
+    .popup_serv_total .serv_total_txt em {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #B5000F; }
+
+/* popup : 무료방식 선택 */
+.popup_radio_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 2px solid #BDC5D1;
+  border-bottom: 1px solid #BDC5D1;
+  padding: 8px 0; }
+  .popup_radio_list > li {
+    width: 50%;
+    min-width: 0;
+    padding: 8px 0; }
+  .popup_radio_list .popup_radio_item {
+    display: flex;
+    align-items: center;
+    gap: 8px; }
+  .popup_radio_list .popup_radio_label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #000; }
+
 @media (max-width: 767px) {
-  .detail_wrap .popup_contents_row .board_paging_row {
-    margin-top: 16px; }
-  .detail_wrap .board_paging_row {
+  .board_paging_row {
     margin-top: 24px; }
-  .detail_wrap .board_paging_row,
-  .detail_wrap .paging_num_list {
+  .board_paging_row,
+  .paging_num_list {
     gap: 3px; } }
 
 @media (max-width: 374px) {
-  .detail_wrap .board_paging_row,
-  .detail_wrap .paging_num_list {
+  .board_paging_row,
+  .paging_num_list {
     gap: 2px; }
-  .detail_wrap .btn_paging_num,
-  .detail_wrap .btn_paging_control {
+  .btn_paging_num,
+  .btn_paging_control {
     border-radius: 5px; } }
 
 /* main */
