@@ -103,8 +103,8 @@
                         <th class="detail_tb_logo" rowspan="3">
                           <div class="tb_logo_wrap">
                             <img
-                              src="./assets/images/logo_company_meritz.png"
-                              alt="Meritz"
+                              src="./assets/images/logo_meritz.png"
+                              alt="meritz"
                             />
                           </div>
                         </th>
@@ -157,7 +157,7 @@
                       <td class="ptb4">
                         <input
                           type="text"
-                          class="btn_text btn_text_b"
+                          class="btn_text"
                           placeholder="주식회사 제이케이플래닛"
                         />
                       </td>
@@ -173,7 +173,7 @@
                       <td class="ptb4">
                         <input
                           type="text"
-                          class="btn_text btn_text_b"
+                          class="btn_text"
                           placeholder="123-45-67890"
                         />
                       </td>
@@ -280,21 +280,25 @@
                         </div>
                         <div class="tb_file_btm">
                           <div class="tb_file_left">
-                            <div class="btn_text tb_file_wrap">
+                            <div class="tb_file_wrap">
                               <input
-                                type="text"
                                 class="tb_file_input"
                                 placeholder="선택한 파일이 없습니다"
+                                readonly
+                              />
+                              <label for="tb_file_btn" class="tb_file_label">
+                                <span class="hdtext">파일 선택</span>
+                              </label>
+                              <input
+                                type="file"
+                                id="tb_file_btn"
+                                class="tb_file_btn"
                               />
                               <p class="tb_file_amount">
-                                <span>0</span>
+                                <em>0</em>
                                 KB
                               </p>
-                              <input type="file" class="tb_file_btn" />
                             </div>
-                            <p class="tb_file_noti">
-                              최대 업로드 파일 크기 : 5MB
-                            </p>
                           </div>
                           <div class="tb_file_right">
                             <div>
@@ -317,6 +321,7 @@
                                 name="file_allow"
                                 id="file_allow_n"
                                 class="file_allow props_dom"
+                                checked
                               />
                               <label
                                 for="file_allow_n"
@@ -326,6 +331,9 @@
                               </label>
                             </div>
                           </div>
+                          <p class="tb_file_noti">
+                            최대 업로드 파일 크기 : 5MB
+                          </p>
                         </div>
                       </td>
                     </tr>
@@ -340,5 +348,12 @@
       <!-- // middle -->
       @@include('./include/footer.html')
     </div>
+
+    <script>
+      $(document).on("change", ".tb_file_wrap input[type='file']", function () {
+        let fileName = $(this).val();
+        $(this).siblings(".tb_file_input").val(fileName);
+      });
+    </script>
   </body>
 </html>
