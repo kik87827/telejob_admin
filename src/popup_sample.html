@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      <div>
+        <a href="#" class="btn_guide_box" id="btnCall">팝업 호출</a>
+        <a href="#" class="btn_guide_box" id="btnCall2">팝업 2 호출</a>
+      </div>
+      <!-- popup -->
+      <div class="popup_wrap" id="samplePopup">
+        <div class="bg_dim"></div>
+        <div class="popup_item">
+          <div class="popup_title_row">
+            <h3 class="popup_title">서비스 금액 수정</h3>
+          </div>
+          <div class="popup_contents_row">
+            <a href="#" class="btn_guide_box" id="btnInstanceTest">
+              팝업 닫기 콜백 호출
+            </a>
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+            <br />
+            내용
+          </div>
+          <div class="popup_btn_row btn_bottom_wrap">
+            <!-- close_trigger 있을시 닫기 -->
+            <a href="#" class="btn_submit_box close_trigger">
+              <span class="btn_submit_box_text">취소</span>
+            </a>
+            <a href="#" class="btn_submit_box primary_full close_trigger">
+              <span class="btn_submit_box_text">저장</span>
+            </a>
+          </div>
+          <a href="javascript:;" class="btn_popup_close">
+            <span class="hdtext">팝업 닫기</span>
+          </a>
+        </div>
+      </div>
+      <div class="popup_wrap" id="samplePopup2">
+        <div class="bg_dim"></div>
+        <div class="popup_item sm_size">
+          <div class="popup_title_row">
+            <h3 class="popup_title">무료방식 선택</h3>
+          </div>
+          <div class="popup_contents_row">내용</div>
+          <div class="popup_btn_row btn_bottom_wrap">
+            <!-- close_trigger 있을시 닫기 -->
+            <a href="#" class="btn_submit_box close_trigger">
+              <span class="btn_submit_box_text">취소</span>
+            </a>
+            <a href="#" class="btn_submit_box primary_full close_trigger">
+              <span class="btn_submit_box_text">저장</span>
+            </a>
+          </div>
+          <a href="javascript:;" class="btn_popup_close">
+            <span class="hdtext">팝업 닫기</span>
+          </a>
+        </div>
+      </div>
+      <!-- // popup -->
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // 인스턴스 선언
+          let designPopup = new DesignPopup({
+            selector: "#samplePopup",
+            beforeCallback() {},
+            callback() {},
+            closeCallback() {},
+          });
+          designPopup.popupShow(); // show
+          // designPopup.popupShow(); // hide
+
+          let designPopup2 = new DesignPopup({
+            selector: "#samplePopup2",
+            beforeCallback() {},
+            callback() {},
+            closeCallback() {},
+          });
+          // designPopup2.popupShow(); // show
+          // designPopup2.popupShow(); // hide
+
+          setTimeout(() => {}, 3000);
+
+          // event
+          document.querySelector("#btnCall").addEventListener("click", () => {
+            designPopup.popupShow(); // show
+          });
+          document.querySelector("#btnCall2").addEventListener("click", () => {
+            designPopup2.popupShow(); // show
+          });
+          document
+            .querySelector("#btnInstanceTest")
+            .addEventListener("click", () => {
+              designPopup.popupHide({
+                beforeClose() {
+                  console.log("samplePopup instance - beforeClose");
+                },
+                closeCallback() {
+                  console.log("samplePopup instance - closeCallback");
+                },
+              });
+            });
+        });
+      </script>
+    </div>
+  </body>
+</html>
