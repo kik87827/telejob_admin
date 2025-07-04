@@ -7,12 +7,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="./assets/css/style.css" rel="stylesheet" />
 	<script src="./assets/js/jquery-3.4.1.min.js"></script>
-	<script src="./assets/js/jquery-ui.js"></script>
+	<script src="./assets/js/jquery-ui.min.js"></script>
+	<script src="./assets/js/jqueryui.min.js"></script>
 	<script src="./assets/js/dynamicListener.min.js"></script>
 	<script src="./assets/js/swiper.min.js"></script>
 	<script src="./assets/js/ui.js"></script>
+	<link href="./assets/css/style.css" rel="stylesheet" />
 	<title>텔레잡</title>
 </head>
 
@@ -120,8 +121,6 @@
 								<li>
 									<a href="#" class="sub_util_link">전화결제(다우페이)</a>
 								</li>
-								<!-- <li><a href="#" class="sub_util_box">로그인</a></li>
-                  <li><a href="#" class="sub_util_box">수정</a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -164,11 +163,11 @@
 							</div>
 							<div class="info_date_wrap">
 								<div class="info_date_item info_bg_ico">
-									<input type="text" id="datepicker" value="2025.05.06" />
+									<input type="text" class="datepicker inp" placeholder="2025.05.06" readonly />
 								</div>
 								<span class="date_flow">~</span>
 								<div class="info_date_item info_bg_ico">
-									<input type="text" id="datepicker" value="2025.05.07" />
+									<input type="text" class="datepicker inp" placeholder="2025.05.07" readonly />
 								</div>
 							</div>
 							<button type="button" class="info_search">검색</button>
@@ -324,6 +323,64 @@
 			<p class="footer_copy">Copyright ⓒ Telejob. All Rights Reserved</p>
 		</footer>
 	</div>
+
+	<script>
+		$.datepicker.setDefaults({
+			closeText: "닫기",
+			prevText: "이전달",
+			nextText: "다음달",
+			currentText: "오늘",
+			monthNames: [
+				"1월",
+				"2월",
+				"3월",
+				"4월",
+				"5월",
+				"6월",
+				"7월",
+				"8월",
+				"9월",
+				"10월",
+				"11월",
+				"12월",
+			],
+			monthNamesShort: [
+				"1월",
+				"2월",
+				"3월",
+				"4월",
+				"5월",
+				"6월",
+				"7월",
+				"8월",
+				"9월",
+				"10월",
+				"11월",
+				"12월",
+			],
+			dayNames: [
+				"일요일",
+				"월요일",
+				"화요일",
+				"수요일",
+				"목요일",
+				"금요일",
+				"토요일",
+			],
+			dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+			dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+			weekHeader: "주",
+			dateFormat: "yy.m.d", // 날짜형태 예)yy년 m월 d일
+			firstDay: 0,
+			isRTL: false,
+			showMonthAfterYear: true,
+			yearSuffix: "년",
+		});
+
+		$(".datepicker").datepicker({
+			minDate: 0,
+		});
+	</script>
 </body>
 
 </html>
