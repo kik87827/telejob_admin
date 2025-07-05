@@ -2269,7 +2269,7 @@ a.ui-button:active,
 .ui-widget-header .ui-state-highlight {
   border: 1px solid #dad55e;
   background: #fffa90;
-  color: #777620; }
+  color: #fff; }
 
 .ui-state-checked {
   border: 1px solid #dad55e;
@@ -4499,8 +4499,14 @@ select.form_select {
 .ui-datepicker-calendar > tbody > tr > td:first-child a {
   color: red !important; }
 
+.ui-datepicker-calendar > tbody > tr > td:first-child a.ui-state-highlight {
+  color: #fff !important; }
+
 .ui-datepicker-calendar > tbody > tr > td:last-child a {
   color: #0099ff !important; }
+
+.ui-datepicker-calendar > tbody > tr > td:last-child a.ui-state-highlight {
+  color: #fff !important; }
 
 .ui-datepicker-calendar > thead > tr > th:first-child {
   color: red !important; }
