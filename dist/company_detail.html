@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;  charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="./assets/js/jquery-3.4.1.min.js"></script>
+	<script src="./assets/js/jquery.min.js"></script>
+	<script src="./assets/js/jquery-ui.min.js"></script>
+	<script src="./assets/js/dynamicListener.min.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/ui.js"></script>
+	<link href="./assets/css/style.css" rel="stylesheet" />
+	<title>텔레잡</title>
+</head>
+
+<body class="admin_body">
+	<div class="page_wrap">
+		<header class="header_wrap">
+			<hgroup class="header_main_row">
+				<div class="main_cols">
+					<h1 class="toplogo"><a href="#" class="toplogo_link"><img src="./assets/images/toplogo.png" alt=""></a></h1>
+				</div>
+				<div class="sub_cols">
+					<ul class="top_menu_list">
+						<li><a href="#" class="top_menu_link">사이트보기</a></li>
+						<li><a href="#" class="top_menu_box">로그아웃</a></li>
+					</ul>
+				</div>
+			</hgroup>
+			<nav class="header_nav_row">
+				<ul class="header_nav_list">
+					<li><a href="#" class="header_nav_menu active">회원관리</a></li>
+					<li><a href="#" class="header_nav_menu">서비스관리</a></li>
+					<li><a href="#" class="header_nav_menu">결제서비스관리</a></li>
+					<li><a href="#" class="header_nav_menu">매출관리</a></li>
+					<li><a href="#" class="header_nav_menu">게시판관리</a></li>
+					<li><a href="#" class="header_nav_menu">분석 및 통계</a></li>
+					<li><a href="#" class="header_nav_menu">포인트관리</a></li>
+					<li><a href="#" class="header_nav_menu">팝업관리</a></li>
+					<li><a href="#" class="header_nav_menu">B2B관리</a></li>
+					<li><a href="#" class="header_nav_menu">기타서비스관리</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- middle -->
+		<section class="middle_wrap">
+			<div class="middle_template">
+				<div class="menu_cols">
+					<div class="left_menu_box">
+						<div class="main_row">
+							<h3 class="left_box_title">회원관리</h3>
+						</div>
+						<div class="sub_row">
+							<ul class="left_menu_list">
+								<li>
+									<a href="#" class="left_menu_item active">
+										<span class="menu_text">기업회원리스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">기업회원 로그</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">기업채팅방 리스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">개인회원원 리스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">메일발송</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">휴면회원 메일발송</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="left_banner_wrap">
+						<ul class="left_banner_list">
+							<li>
+								<a href="#" class="left_banner_item">
+									<i class="ico calculator"></i>
+									<span class="banner_text">계산기</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="left_banner_item skin2">
+									<i class="ico message"></i>
+									<span class="banner_text">문자전송(슈어엠)</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contents_cols">
+					<div class="contents_top_row">
+						<div class="main_cols">
+							<ul class="breadcrumb_item_list">
+								<li><a href="#" class="bread_home"></a></li>
+								<li><a href="#" class="bread_menu">기업회원리스트</a></li>
+								<li>
+									<strong class="bread_current">기업회원 상세정보</strong>
+								</li>
+							</ul>
+							<h2 class="contents_title">기업회원 상세정보</h2>
+						</div>
+						<div class="sub_cols">
+							<ul class="sub_util_list">
+								<li><a href="#" class="sub_util_box">로그인</a></li>
+								<li><a href="#" class="sub_util_box">수정</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="contents_main_row">
+						<div class="detail_wrap">
+							<p class="detail_wrap_tit">기본정보</p>
+							<div class="detail_tb_wrap">
+								<table class="detail_tb">
+									<caption>기업회원 기본정보</caption>
+									<colgroup>
+										<col style="width: 12%" />
+										<col style="width: 12%" />
+										<col />
+										<col style="width: 12%" />
+										<col />
+										<col style="width: 12%" />
+										<col />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="detail_tb_logo" rowspan="3">
+												<div class="tb_logo_wrap">
+													<img src="./assets/images/logo_meritz.png" alt="meritz" />
+												</div>
+											</th>
+											<th>기업아이디</th>
+											<td>jkp04261234567</td>
+											<th>비밀번호</th>
+											<td>jkp0426</td>
+											<th>이메일</th>
+											<td>jiwon2u77@nate.com</td>
+										</tr>
+										<tr>
+											<th>최종 로그인</th>
+											<td>2025-05-11 17:21:34</td>
+											<th>등록일</th>
+											<td>2025-05-11 17:21:34</td>
+											<th>수정일</th>
+											<td>2025-05-11 17:21:34</td>
+										</tr>
+										<tr>
+											<th class="ptb4">상태</th>
+											<td colspan="5" class="ptb4">
+												<div class="btn_select_wrap">
+													<select class="btn_select tb_input_status">
+														<option value="status_steady">정상(승인)</option>
+														<option value="status_steady">정상(승인)</option>
+														<option value="status_steady">정상(승인)</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- // 기본정보 -->
+
+							<p class="detail_wrap_tit">기업정보</p>
+							<div class="detail_tb_wrap">
+								<table class="detail_tb">
+									<caption>기업회원 기업정보</caption>
+									<colgroup>
+										<col style="width: 12%" />
+										<col />
+										<col style="width: 12%" />
+										<col />
+										<col style="width: 12%" />
+										<col />
+									</colgroup>
+									<tr>
+										<th class="ptb4">회사명</th>
+										<td class="ptb4">
+											<input type="text" class="btn_text" placeholder="주식회사 제이케이플래닛" />
+										</td>
+										<th>기업형태</th>
+										<td>법인(개인)사업자</td>
+										<th>업종</th>
+										<td>아웃소싱(TM/콜센터)</td>
+									</tr>
+									<tr>
+										<th>상장여부</th>
+										<td>미상장</td>
+										<th class="ptb4">사업자번호</th>
+										<td class="ptb4">
+											<input type="text" class="btn_text" placeholder="123-45-67890" />
+										</td>
+										<th>대표자명</th>
+										<td>박세환</td>
+									</tr>
+									<tr>
+										<th>연락처</th>
+										<td>010-1234-5678</td>
+										<th>팩스</th>
+										<td>02-123-4567</td>
+										<th>홈페이지</th>
+										<td>www.jkp.co.kr</td>
+									</tr>
+									<tr>
+										<th>자본금</th>
+										<td>
+											<em class="num">5,000</em>
+											<span class="smtxt">만원</span>
+										</td>
+										<th>매출액</th>
+										<td>
+											<em class="num">5,000</em>
+											<span class="smtxt">만원</span>
+										</td>
+										<th>설립연도</th>
+										<td>2025.07</td>
+									</tr>
+									<tr>
+										<th class="ptb12">회사명</th>
+										<td class="ptb12" colspan="5">
+											<div class="tb_adress_top">
+												<input type="text" class="btn_text tb_adress_num" placeholder="우편번호" disabled />
+												<button type="button" class="tb_adress_search">
+													주소검색
+												</button>
+											</div>
+											<div class="tb_adress_btm">
+												<input type="text" class="btn_text tb_adress_normal" placeholder="서울 금천구 가산디지털1로 137(가산동, IT캐슬2차)" disabled />
+												<input type="text" class="btn_text tb_adress_detail" placeholder="1403호" disabled />
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th class="ptb24">회사소개</th>
+										<td class="ptb24" colspan="5">
+											<dl class="tb_comp_info">
+												<dt>기업 개요 및 비전</dt>
+												<dd>
+													한국기업지원센터㈜는 20년간 주요 통신, 멤버십,
+													홈케어, 보험, 쇼핑 서비스 등을 제공하여 첨단 IT
+													세대에 걸맞는ITC 기업으로 우뚝 섰습니다. 각종 플랫폼
+													개발과 마케팅, 판매, 텔레마케팅등 다양한 사업
+													확장성을 가지고 있으며, 미래를 나아가는 선두 주자 및
+													이노베이션의 척도를 그려내고 있는 강대 튼튼한
+													기업으로 자리매김 하고 있습니다. 
+												</dd>
+											</dl>
+											<dl class="tb_comp_info">
+												<dt>연혁 및 실적</dt>
+												<dd>
+													ITC 개발 주 한국기업지원센터㈜는 2000년도 초 부터 수
+													많은 가능성을 가지고 있는 주요 통신, 멤버십, 홈케어,
+													보험, 쇼핑 서비스 등으로 매출 100억 이상의 가치를
+													보여 주었고, 더 나아가 ‘서비스’라는 콘셉트를  가지고
+													전세계인들의 라이프스타일을 발전시키는, 세계에서
+													인정받는 기업으로 나날히 발전하고 있으며, 사계의
+													사업체계를 이노베이션화 하는 기준으로서 모범이 되는
+													일류 기업입니다.
+												</dd>
+											</dl>
+										</td>
+									</tr>
+									<tr>
+										<th class="ptb12">사업자등록증</th>
+										<td class="ptb12" colspan="5">
+											<div class="tb_file_top">
+												<button type="button" class="tb_file_download">
+													사업자등록증 다운받기
+												</button>
+												<div class="tb_chkbox_area">
+													<input name="btn_check" type="checkbox" class="btn_check" />
+													<label for="btn_check">파일 삭제</label>
+												</div>
+											</div>
+											<div class="tb_file_btm">
+												<div class="tb_file_left">
+													<div class="tb_file_wrap">
+														<input class="tb_file_input" placeholder="선택한 파일이 없습니다" readonly />
+														<label for="tb_file_btn" class="tb_file_label">
+															<span class="hdtext">파일 선택</span>
+														</label>
+														<input type="file" id="tb_file_btn" class="tb_file_btn" />
+														<p class="tb_file_amount">
+															<em>0</em>
+															KB
+														</p>
+													</div>
+												</div>
+												<div class="tb_file_right">
+													<div>
+														<input type="radio" name="file_allow" id="file_allow_y" class="file_allow props_dom" />
+														<label for="file_allow_y" class="file_allow_label">
+															허용
+														</label>
+													</div>
+													<div>
+														<input type="radio" name="file_allow" id="file_allow_n" class="file_allow props_dom" checked />
+														<label for="file_allow_n" class="file_allow_label">
+															허용 안함
+														</label>
+													</div>
+												</div>
+												<p class="tb_file_noti">
+													최대 업로드 파일 크기 : 5MB
+												</p>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!-- // 기업정보 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // middle -->
+		<footer class="footer_wrap">
+			<p class="footer_copy">Copyright ⓒ Telejob. All Rights Reserved</p>
+		</footer>
+	</div>
+
+	<script>
+		$(document).on("change", ".tb_file_wrap input[type='file']", function() {
+			let fileName = $(this).val();
+			$(this).siblings(".tb_file_input").val(fileName);
+		});
+	</script>
+</body>
+
+</html>

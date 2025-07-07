@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;  charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="./assets/js/jquery-3.4.1.min.js"></script>
+	<script src="./assets/js/jquery.min.js"></script>
+	<script src="./assets/js/jquery-ui.min.js"></script>
+	<script src="./assets/js/dynamicListener.min.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/ui.js"></script>
+	<link href="./assets/css/style.css" rel="stylesheet" />
+	<title>텔레잡</title>
+</head>
+
+<body class="admin_body">
+	<div class="page_wrap">
+		<header class="header_wrap">
+			<hgroup class="header_main_row">
+				<div class="main_cols">
+					<h1 class="toplogo"><a href="#" class="toplogo_link"><img src="./assets/images/toplogo.png" alt=""></a></h1>
+				</div>
+				<div class="sub_cols">
+					<ul class="top_menu_list">
+						<li><a href="#" class="top_menu_link">사이트보기</a></li>
+						<li><a href="#" class="top_menu_box">로그아웃</a></li>
+					</ul>
+				</div>
+			</hgroup>
+			<nav class="header_nav_row">
+				<ul class="header_nav_list">
+					<li><a href="#" class="header_nav_menu active">회원관리</a></li>
+					<li><a href="#" class="header_nav_menu">서비스관리</a></li>
+					<li><a href="#" class="header_nav_menu">결제서비스관리</a></li>
+					<li><a href="#" class="header_nav_menu">매출관리</a></li>
+					<li><a href="#" class="header_nav_menu">게시판관리</a></li>
+					<li><a href="#" class="header_nav_menu">분석 및 통계</a></li>
+					<li><a href="#" class="header_nav_menu">포인트관리</a></li>
+					<li><a href="#" class="header_nav_menu">팝업관리</a></li>
+					<li><a href="#" class="header_nav_menu">B2B관리</a></li>
+					<li><a href="#" class="header_nav_menu">기타서비스관리</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- middle -->
+		<section class="middle_wrap">
+			<div class="middle_template">
+				<div class="menu_cols">
+					<div class="left_menu_box">
+						<div class="main_row">
+							<h3 class="left_box_title">회원관리</h3>
+						</div>
+						<div class="sub_row">
+							<ul class="left_menu_list">
+								<li>
+									<a href="#" class="left_menu_item active">
+										<span class="menu_text">기업회원리스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">기업회원 로그</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">기업채팅방 리스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">개인회원원 리스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">메일발송</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="left_menu_item">
+										<span class="menu_text">휴면회원 메일발송</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="left_banner_wrap">
+						<ul class="left_banner_list">
+							<li>
+								<a href="#" class="left_banner_item">
+									<i class="ico calculator"></i>
+									<span class="banner_text">계산기</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="left_banner_item skin2">
+									<i class="ico message"></i>
+									<span class="banner_text">문자전송(슈어엠)</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contents_cols">
+					<div class="contents_top_row">
+						<div class="main_cols">
+							<ul class="breadcrumb_item_list">
+								<li><a href="#" class="bread_home"></a></li>
+								<li><a href="#" class="bread_menu">결제서비스관리</a></li>
+								<li><strong class="bread_current">결제내역</strong></li>
+							</ul>
+							<h2 class="contents_title">결제내역</h2>
+						</div>
+						<div class="sub_cols">
+							<ul class="sub_util_list">
+								<li>
+									<a href="#" class="sub_util_link">전화결제(다우페이)</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contents_main_row">
+						<!-- 내용이 들어갑니다. -->
+						<div class="info_col_wrap">
+							<div class="info_text_wrap">
+								<label for="info_id" class="info_text_label">아이디</label>
+								<input type="text" id="info_id" class="info_text_input" placeholder="아이디 입력" />
+							</div>
+							<div class="info_text_wrap">
+								<label for="info_company" class="info_text_label">
+									회사명
+								</label>
+								<input type="text" id="info_company" class="info_text_input" placeholder="회사명" />
+							</div>
+							<div class="info_text_wrap last">
+								<label for="info_name" class="info_text_label">
+									입금자명
+								</label>
+								<input type="text" id="info_name" class="info_text_input short" placeholder="입금자명" />
+							</div>
+							<div class="info_select_wrap info_bg_ico">
+								<select class="pay_opt_list">
+									<option value="pay_opt01">결제방법</option>
+									<option value="pay_opt02">결제방법2</option>
+									<option value="pay_opt03">결제방법3</option>
+									<option value="pay_opt04">결제방법4</option>
+									<option value="pay_opt05">결제방법5</option>
+								</select>
+							</div>
+							<div class="info_select_wrap info_bg_ico">
+								<select class="pay_opt_list">
+									<option value="pay_opt01">결제상태</option>
+									<option value="pay_opt02">결제상태2</option>
+									<option value="pay_opt03">결제상태3</option>
+									<option value="pay_opt04">결제상태4</option>
+									<option value="pay_opt05">결제상태5</option>
+								</select>
+							</div>
+							<div class="info_date_wrap">
+								<div class="info_date_item info_bg_ico">
+									<input type="text" class="datepicker inp" placeholder="2025.05.06" readonly />
+								</div>
+								<span class="date_flow">~</span>
+								<div class="info_date_item info_bg_ico">
+									<input type="text" class="datepicker inp" placeholder="2025.05.07" readonly />
+								</div>
+							</div>
+							<button type="button" class="info_search">검색</button>
+							<button type="button" class="info_excel_download">
+								엑셀 다운로드
+							</button>
+						</div>
+
+						<div class="detail_wrap result_wrap">
+							<ul class="result_brief_list">
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 카드결제</dt>
+										<dd class="result_brief_desc">
+											<strong class="num">0</strong>
+											건
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 계좌이체</dt>
+										<dd class="result_brief_desc">
+											<strong class="num">0</strong>
+											건
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 무통장 입금</dt>
+										<dd class="result_brief_desc">
+											<strong class="num">0</strong>
+											건
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 취소 금액</dt>
+										<dd class="result_brief_desc gray">
+											<strong class="num">0</strong>
+											원
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">입금확인 중</dt>
+										<dd class="result_brief_desc">
+											<strong class="num">20,942,400</strong>
+											원
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="result_brief_item">
+										<dt class="result_brief_tit">금일 결제합계</dt>
+										<dd class="result_brief_desc">
+											<strong class="num red">801,232,600</strong>
+											원
+										</dd>
+									</dl>
+								</li>
+							</ul>
+							<div class="result_tb_wrap">
+								<table class="result_tb">
+									<caption>결제내역 리스트</caption>
+									<colgroup>
+										<col />
+										<col />
+										<col />
+										<col />
+										<col />
+										<col style="width: 40%" />
+										<col style="width: 12%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>공고번호</th>
+											<th>서비스명</th>
+											<th>결제일</th>
+											<th>서비스 기간</th>
+											<th>기업명</th>
+											<th>채용공고</th>
+											<th>채용공고 연결</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>-</td>
+											<td>SKY배너</td>
+											<td>2025.05.28</td>
+											<td>2025.05.28 ~ 2025.06.27</td>
+											<td>메리츠화재</td>
+											<td>위촉당월 평균급여 4배지급 합니다.</td>
+											<td>
+												<a href="#" class="btn_result_link" title="해당 공고 페이지 이동">
+													공고선택
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>91038</td>
+											<td>프리미엄스페셜</td>
+											<td>2025.03.12</td>
+											<td>2025.03.12 ~ 2025.04.11</td>
+											<td>메리츠화재</td>
+											<td>위촉당월 평균급여 4배지급 합니다.</td>
+											<td>
+												<a href="#" class="btn_result_link" title="해당 공고 페이지 이동">
+													공고선택
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="board_paging_row">
+									<a href="javascript:;" class="btn_paging_control first"></a>
+									<a href="javascript:;" class="btn_paging_control prev"></a>
+									<ul class="paging_num_list">
+										<li>
+											<a href="javascript:;" class="btn_paging_num active">
+												1
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="btn_paging_num">2</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="btn_paging_num">3</a>
+										</li>
+										<li>
+											<span class="btn_paging_num clamp_text">...</span>
+										</li>
+										<li>
+											<a href="javascript:;" class="btn_paging_num">10</a>
+										</li>
+										<li></li>
+									</ul>
+									<a href="javascript:;" class="btn_paging_control next"></a>
+									<a href="javascript:;" class="btn_paging_control last"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // middle -->
+		<footer class="footer_wrap">
+			<p class="footer_copy">Copyright ⓒ Telejob. All Rights Reserved</p>
+		</footer>
+	</div>
+
+	<script>
+		$.datepicker.setDefaults({
+			closeText: "닫기",
+			prevText: "이전달",
+			nextText: "다음달",
+			currentText: "오늘",
+			monthNames: [
+				"1월",
+				"2월",
+				"3월",
+				"4월",
+				"5월",
+				"6월",
+				"7월",
+				"8월",
+				"9월",
+				"10월",
+				"11월",
+				"12월",
+			],
+			monthNamesShort: [
+				"1월",
+				"2월",
+				"3월",
+				"4월",
+				"5월",
+				"6월",
+				"7월",
+				"8월",
+				"9월",
+				"10월",
+				"11월",
+				"12월",
+			],
+			dayNames: [
+				"일요일",
+				"월요일",
+				"화요일",
+				"수요일",
+				"목요일",
+				"금요일",
+				"토요일",
+			],
+			dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+			dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+			weekHeader: "주",
+			dateFormat: "yy.mm.dd", // 날짜형태 예)yy년 m월 d일
+			firstDay: 0,
+			isRTL: false,
+			showMonthAfterYear: true,
+			yearSuffix: "년",
+		});
+
+		$(".datepicker").datepicker({
+			minDate: 0,
+		});
+	</script>
+</body>
+
+</html>

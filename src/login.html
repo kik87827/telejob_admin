@@ -1,19 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
   @@include('./include/head.html')
-  <body class="admin_body">
-    <div class="page_wrap">
+  <body class="admin_body login">
+    <div class="page_wrap max_1280">
+      @@include('./include/footer.html')
       <!-- middle -->
       <section class="middle_wrap">
         <div class="single_form_container">
-          <div class="single_top_row"><h1 class="single_top_title">텔레잡 관리자 로그인</h1></div>
+          <div class="single_top_row">
+            <h1 class="single_top_title">텔레잡 관리자 로그인</h1>
+          </div>
           <div class="single_middle_row">
-            <div class="single_form_box">내용이 들어갑니다.</div>
+            <div class="single_form_box">
+              <div class="single_form_div">
+                <div class="single_form_left">
+                  <div class="form_left_img">
+                    <img
+                      src="./assets/images/login/login_single_left_img.png"
+                      alt=""
+                    />
+                  </div>
+                  <ul class="form_left_list">
+                    <li>
+                      <div class="form_left_item">
+                        <span class="left_item_tit">Tel.</span>
+                        <span class="left_item_desc">031-706-2229</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form_left_item">
+                        <span class="left_item_tit">Fax.</span>
+                        <span class="left_item_desc">031-326-3169</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form_left_item">
+                        <span class="left_item_tit">Mail.</span>
+                        <span class="left_item_desc">
+                          telehelp@telejob.co.kr
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- // 로그인 왼쪽 영역 -->
+
+                <div class="single_form_right">
+                  <div class="right_input_area">
+                    <label for="admin_id">아이디</label>
+                    <div class="form_right_input">
+                      <input
+                        name="admin_id"
+                        type="text"
+                        id="admin_id"
+                        placeholder="아이디를 입력하세요"
+                        required
+                      />
+                      <button type="reset" class="form_btn btn_clear">
+                        <span class="hdtext">clear</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right_input_area">
+                    <label for="admin_pw">비밀번호</label>
+                    <div class="form_right_input">
+                      <input
+                        name="admin_pw"
+                        type="password"
+                        id="admin_pw"
+                        placeholder="비밀번호를 입력하세요"
+                        required
+                      />
+                      <button class="form_btn btn_show">
+                        <span class="hdtext">show password</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="right_chkbox_area">
+                    <input name="btn_check" type="checkbox" class="btn_check" />
+                    <label for="ico_keep">로그인 유지</label>
+                  </div>
+                  <button class="form_btn_submit">로그인</button>
+                </div>
+                <!-- // 로그인 오른쪽 영역 -->
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- // middle -->
-      @@include('./include/footer.html')
     </div>
   </body>
 </html>

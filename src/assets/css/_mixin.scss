@@ -4,6 +4,18 @@
 $primary : #0B51C5;
 $primary2 : #0053C2;
 
+$pcwid : 1340px;
+$pcwid_large : 1440px;
+
+$tablet : 1299px;
+$mobile_large : 1023px;
+$mobile : 767px;
+$mobile_size1 : 550px;
+$mobile_size2 : 450px;
+$mobile_size3 : 374px;
+$mobile_small : 359px;
+$mobile_xsmall : 319px;
+
 
 @mixin font(
   $size,
