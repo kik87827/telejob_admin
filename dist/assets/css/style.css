@@ -3488,12 +3488,16 @@ input.props_dom {
     .single_form_div .single_form_right .form_right_input input {
       width: 100%;
       height: 48px;
-      padding: 0 13px;
+      padding-left: 13px;
       font-size: 14px;
       font-weight: 500;
       line-height: 48px;
-      color: #AAA;
+      color: #000;
       border-radius: 8px; }
+      .single_form_div .single_form_right .form_right_input input::-moz-placeholder {
+        color: #AAA; }
+      .single_form_div .single_form_right .form_right_input input::placeholder {
+        color: #AAA; }
   .single_form_div .single_form_right .form_btn {
     display: block;
     position: absolute;
