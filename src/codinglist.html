@@ -168,19 +168,7 @@
         sh = h; //띄울 창의 높이
         ml = (cw - sw) / 2; //가운데 띄우기위한 창의 x위치
         mt = (ch - sh) / 2; //가운데 띄우기위한 창의 y위치
-        test = window.open(
-          url,
-          "tst",
-          "width=" +
-            sw +
-            ",height=" +
-            sh +
-            ",top=" +
-            mt +
-            ",left=" +
-            ml +
-            ",resizable=no,scrollbars=yes"
-        );
+        test = window.open(url, "tst", "width=" + sw + ",height=" + sh + ",top=" + mt + ",left=" + ml + ",resizable=no,scrollbars=yes");
       }
     </script>
   </head>
@@ -202,14 +190,9 @@
         </p>
         <p>
           깃주소 :
-          <a href="https://github.com/kik87827/telejob_admin" target="_blank">
-            https://github.com/kik87827/telejob_admin
-          </a>
+          <a href="https://github.com/kik87827/telejob_admin" target="_blank">https://github.com/kik87827/telejob_admin</a>
         </p>
-        <p>
-          소스내 src는 퍼블 컴파일 전 인크로드 환경이고 dist는 컴파일 후 전체
-          렌더된 환경이니 소스는 dist를 보시면 됩니다.
-        </p>
+        <p>소스내 src는 퍼블 컴파일 전 인크로드 환경이고 dist는 컴파일 후 전체 렌더된 환경이니 소스는 dist를 보시면 됩니다.</p>
       </div>
       <div class="list_w">
         <table class="codinglist">
@@ -260,6 +243,15 @@
               <td class="work end"></td>
               <td class="bgo"></td>
             </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link">
+                <a href="components.html" target="_blank">컴포넌트 샘플</a>
+              </td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
             <tr class="depth">
               <td colspan="5">페이지</td>
             </tr>
@@ -284,9 +276,7 @@
             <tr>
               <td class="no"></td>
               <td class="link">
-                <a href="company_detail.html" target="_blank">
-                  기업회원 상세정보
-                </a>
+                <a href="company_detail.html" target="_blank">기업회원 상세정보</a>
               </td>
               <td class="td_url"></td>
               <td class="work end"></td>
@@ -295,9 +285,7 @@
             <tr>
               <td class="no"></td>
               <td class="link">
-                <a href="company_detail_02.html" target="_blank">
-                  기업회원 상세정보 2
-                </a>
+                <a href="company_detail_02.html" target="_blank">기업회원 상세정보 2</a>
               </td>
               <td class="td_url"></td>
               <td class="work end"></td>
@@ -306,9 +294,7 @@
             <tr>
               <td class="no"></td>
               <td class="link">
-                <a href="design_app_list.html" target="_blank">
-                  디자인 신청 리스트
-                </a>
+                <a href="design_app_list.html" target="_blank">디자인 신청 리스트</a>
               </td>
               <td class="td_url"></td>
               <td class="work end"></td>
@@ -317,9 +303,7 @@
             <tr>
               <td class="no"></td>
               <td class="link">
-                <a href="design_app_detail.html" target="_blank">
-                  디자인 신청 상세
-                </a>
+                <a href="design_app_detail.html" target="_blank">디자인 신청 상세</a>
               </td>
               <td class="td_url"></td>
               <td class="work end"></td>
@@ -336,8 +320,7 @@
       });
 
       function chkList() {
-        var tatal_n =
-          $(".codinglist tr").length - $(".depth,.depth2").length - 1;
+        var tatal_n = $(".codinglist tr").length - $(".depth,.depth2").length - 1;
         var curr_n = 0;
         var $ctd = $(".codinglist td.work"),
           $ctr = $(".codinglist tr");
@@ -392,9 +375,7 @@
             $this
               .parent("td")
               .next(".td_url")
-              .append(
-                "<a href=" + $t_href + ' target="_blank">' + $t_href + "</a>"
-              );
+              .append("<a href=" + $t_href + ' target="_blank">' + $t_href + "</a>");
           }
         });
         $(".total_n").text(tatal_n);

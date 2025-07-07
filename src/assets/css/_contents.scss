@@ -79,7 +79,7 @@ input.props_dom{
         display: flex; align-items: center; gap: 8px; margin-right: 24px;
         &.last {margin-right: 4px;}
     }
-    .info_text_label {@include font2(16px,400,1.5,#005AAB);}
+    .info_text_label {@include font2(16px,400,1.5,#005AAB); white-space: nowrap;}
     .info_text_input {
         width: 140px; @include font2(16px,400,1.5,#000);
         &::placeholder {color: #AAA;}
@@ -295,7 +295,7 @@ select.form_select{
 .status_completed {color: #00A7FC;}
 .tb_refer_list {display: flex; align-items: center; gap: 36px;}
 .tb_refer_item {
-    position: relative; padding-left: 16px; @include font2(16px,700,1.5,#000); text-decoration: underline;
+    position: relative; padding-left: 16px; @include font2(16px,700,1.5,#000); text-decoration: underline !important;
     &:before {content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 12px; height: 12px; @include bgicon; background-image: url("../images/ico_clip.png"); background-color: #fff;}
 }
 .detail_btn_wrap {display: flex; justify-content: space-between; margin-top: 24px;}
@@ -340,7 +340,7 @@ select.form_select{
 .ui-datepicker .ui-datepicker-header {position: relative;display: flex; align-items: center; justify-content: center; padding: 4px 0;}
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {border: 0px solid #c5c5c5;background-color: transparent;font-weight: normal;color: #454545;text-align: center;}
 .ui-datepicker .ui-datepicker-title {margin: 0 0em;text-align: center;@include font2(16px,500,1.5,#000); padding: 0px;font-weight: bold;}
-.ui-datepicker {display: none;background-color: #fff;border-radius: 4px;margin-top: 10px;margin-left: 0px;margin-right: 0px;padding: 16px;width: 212px; /*box-shadow: 10px 10px 40px rgba(0,0,0,0.1);*/border-radius: 12px;}
+.ui-datepicker {display: none;background-color: #fff;border-radius: 4px;margin-top: 10px;margin-bottom:10px;margin-left: 0px;margin-right: 0px;padding: 16px;width: 212px; /*box-shadow: 10px 10px 40px rgba(0,0,0,0.1);*/border-radius: 12px;}
 .ui-widget.ui-widget-content {    border: 1px solid #eee;}
 #datepicker:focus>.ui-datepicker {display: block;}
 .ui-datepicker-prev,

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body class="admin_body">
+    <div class="page_wrap">
+      @@include('./include/header.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_template">
+          <div class="contents_cols">
+            <div class="contents_top_row">
+              <div class="main_cols">
+                <ul class="breadcrumb_item_list">
+                  <li>
+                    <a href="#" class="bread_home"></a>
+                  </li>
+                  <li>
+                    <strong class="bread_current">콤포넌트</strong>
+                  </li>
+                </ul>
+                <h2 class="contents_title">콤포넌트</h2>
+              </div>
+            </div>
+            <div class="contents_main_row">
+              <div class="box_input_area">
+                <label for="admin_id">아이디</label>
+                <div class="box_input_item">
+                  <input name="admin_id" type="text" id="admin_id" placeholder="아이디를 입력하세요" required />
+                  <button type="reset" class="form_btn btn_clear">
+                    <span class="hdtext">clear</span>
+                  </button>
+                </div>
+              </div>
+              <div class="box_input_area">
+                <label for="admin_pw">비밀번호</label>
+                <div class="box_input_item">
+                  <input name="admin_pw" type="password" id="admin_pw" placeholder="비밀번호를 입력하세요" required />
+                </div>
+              </div>
+              <div class="props_check_item">
+                <input name="btn_check" type="checkbox" class="props_check_dom" />
+                <label for="ico_keep">로그인 유지</label>
+              </div>
+              <br />
+              <button class="btn_form_submit">로그인</button>
+
+              <br />
+              <br />
+              <div class="block_text_group">
+                <label for="info_id" class="block_text_label">아이디</label>
+                <input type="text" id="info_id" class="block_text_input" placeholder="아이디 입력" />
+              </div>
+              <br />
+              <div class="block_text_group">
+                <label for="info_comp" class="block_text_label">회사명</label>
+                <input type="text" id="info_comp" class="block_text_input" placeholder="회사명" />
+              </div>
+              <br />
+              <div class="block_col_container">
+                <div class="block_text_group">
+                  <label for="info_id" class="block_text_label">아이디</label>
+                  <input type="text" id="info_id" class="block_text_input" placeholder="아이디 입력" />
+                </div>
+                <div class="block_text_group">
+                  <label for="info_comp" class="block_text_label">회사명</label>
+                  <input type="text" id="info_comp" class="block_text_input" placeholder="회사명" />
+                </div>
+              </div>
+              <br />
+              <select class="combo_select_box">
+                <option value="pay_opt01">결제방법</option>
+                <option value="pay_opt02">결제방법2</option>
+                <option value="pay_opt03">결제방법3</option>
+                <option value="pay_opt04">결제방법4</option>
+                <option value="pay_opt05">결제방법5</option>
+              </select>
+              <br />
+              <br />
+              <select class="combo_select_box" style="width: 150px">
+                <option value="pay_opt01">결제방법</option>
+                <option value="pay_opt02">결제방법2</option>
+                <option value="pay_opt03">결제방법3</option>
+                <option value="pay_opt04">결제방법4</option>
+                <option value="pay_opt05">결제방법5</option>
+              </select>
+              <br />
+              <br />
+              <a href="#" class="btn_result_linkbox" title="해당 공고 페이지 이동">공고선택</a>
+              <br />
+              <br />
+              <button type="button" class="btn_field_searchbox">검색</button>
+              <br />
+              <br />
+              <div class="ring_date_wrap">
+                <div class="ring_date_item ring_bg_ico">
+                  <input type="text" class="datepicker inp" placeholder="2025.05.06" readonly />
+                </div>
+                <span class="ring_date_flow">~</span>
+                <div class="ring_date_item ring_bg_ico">
+                  <input type="text" class="datepicker inp" placeholder="2025.05.07" readonly />
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="ring_date_wrap long_type">
+                <div class="ring_date_item ring_bg_ico">
+                  <input type="text" class="datepicker inp" placeholder="2025.05.06" readonly />
+                </div>
+                <span class="ring_date_flow">~</span>
+                <div class="ring_date_item ring_bg_ico">
+                  <input type="text" class="datepicker inp" placeholder="2025.05.07" readonly />
+                </div>
+              </div>
+              <br />
+              <br />
+              <button type="button" class="btn_excel_download">엑셀 다운로드</button>
+              <br />
+              <br />
+              <select required class="form_select_box">
+                <option value="" disabled selected hidden>이전 이용약관 보기</option>
+                <option value="history_01">정상(승인)</option>
+                <option value="history_02">정상(승인)2</option>
+              </select>
+              <br />
+              <br />
+              <select required class="form_select_box" style="width: 200px">
+                <option value="" disabled selected hidden>이전 이용약관 보기</option>
+                <option value="history_01">정상(승인)</option>
+                <option value="history_02">정상(승인)2</option>
+              </select>
+              <br />
+              <br />
+              <input type="text" class="form_box_text" placeholder="주식회사 제이케이플래닛" />
+              <br />
+              <br />
+              <input type="text" class="form_box_text" style="width: 200px" placeholder="주식회사 제이케이플래닛" />
+              <br />
+              <br />
+              <div class="props_item_wrap">
+                <ul class="props_item_list">
+                  <li>
+                    <div class="props_this_item">
+                      <input type="radio" name="use" class="props_this_dom" id="use_yes" />
+                      <label for="use_yes" class="props_this_label">사용</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="props_this_item">
+                      <input type="radio" name="use" class="props_this_dom" id="use_no" />
+                      <label for="use_no" class="props_this_label">사용하지 않음</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <br />
+              <br />
+              <div class="props_item_wrap">
+                <ul class="props_item_list">
+                  <li>
+                    <div class="props_this_item">
+                      <input type="checkbox" class="props_this_dom" id="login_maintain" />
+                      <label for="login_maintain" class="props_this_label">로그인 유지</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="props_this_item">
+                      <input type="checkbox" class="props_this_dom" id="file_delete" />
+                      <label for="file_delete" class="props_this_label">파일 삭제</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <br />
+              <br />
+              <p>단독 체크박스</p>
+              <br />
+              <div class="props_this_item">
+                <input type="checkbox" class="props_this_dom" id="file_delete2" />
+                <label for="file_delete2" class="props_this_label">파일 삭제</label>
+              </div>
+              <br />
+              <br />
+              <ul class="tb_refer_list">
+                <li>
+                  <a href="#" class="tb_refer_item" title="참고자료 열림">20221017152737281.jpg</a>
+                </li>
+                <li>
+                  <a href="#" class="tb_refer_item" title="참고자료 열림">20221017152737281.jpg</a>
+                </li>
+                <li>
+                  <a href="#" class="tb_refer_item" title="참고자료 열림">20221017152737281.jpg</a>
+                </li>
+              </ul>
+              <br />
+              <br />
+              <button type="button" class="text_file_download">사업자등록증 다운받기</button>
+              <br />
+              <br />
+              <div class="upload_file_wrap">
+                <input class="upload_file_input" placeholder="선택한 파일이 없습니다" readonly="" />
+                <label for="upload_file_btn" class="upload_file_label">
+                  <span class="hdtext">파일 선택</span>
+                </label>
+                <input type="file" id="tb_file_btn" class="upload_file_btn" />
+                <p class="upload_file_amount">
+                  <em>0</em>
+                  KB
+                </p>
+              </div>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // middle -->
+      <script>
+        $.datepicker.setDefaults({
+          closeText: "닫기",
+          prevText: "이전달",
+          nextText: "다음달",
+          currentText: "오늘",
+          monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+          monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+          dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+          dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+          dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+          weekHeader: "주",
+          dateFormat: "yy.mm.dd", // 날짜형태 예)yy년 m월 d일
+          firstDay: 0,
+          isRTL: false,
+          showMonthAfterYear: true,
+          yearSuffix: "년",
+        });
+
+        $(".datepicker").datepicker({
+          minDate: 0,
+        });
+
+        // 파일 업로드드
+        $(document).on("change", ".upload_file_wrap input[type='file']", function () {
+          let fileName = $(this).val();
+          $(this).siblings(".upload_file_input").val(fileName);
+        });
+      </script>
+      @@include('./include/footer.html')
+    </div>
+  </body>
+</html>
