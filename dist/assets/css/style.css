@@ -3488,7 +3488,7 @@ input.props_dom {
     .single_form_div .single_form_right .form_right_input input {
       width: 100%;
       height: 48px;
-      padding-left: 13px;
+      padding: 0 13px;
       font-size: 14px;
       font-weight: 500;
       line-height: 48px;
