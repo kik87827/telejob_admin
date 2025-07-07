@@ -3377,7 +3377,7 @@ em {
   position: relative;
   width: 100%;
   height: 48px;
-  padding-left: 13px;
+  padding: 0 13px;
   font-size: 14px;
   font-weight: 500;
   line-height: 48px;
@@ -3418,7 +3418,7 @@ em {
   position: relative;
   width: 100%;
   height: 48px;
-  padding-left: 13px;
+  padding: 0 13px;
   font-size: 14px;
   font-weight: 500;
   line-height: 48px;
@@ -3445,6 +3445,13 @@ input.props_dom {
     background-image: url("../images/ico_radio.png"); }
   input.props_dom:checked {
     background-position: 0 100%; }
+
+.btn_text::-moz-placeholder, .btn_select::-moz-placeholder {
+  color: #AAA; }
+
+.btn_text::placeholder,
+.btn_select::placeholder {
+  color: #AAA; }
 
 /* login */
 .single_form_div {
@@ -3484,31 +3491,35 @@ input.props_dom {
       color: #000; }
   .single_form_div .single_form_right .form_right_input {
     position: relative;
-    max-width: 302px; }
+    max-width: 302px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #E6E6E6;
+    border-radius: 8px; }
     .single_form_div .single_form_right .form_right_input input {
       width: 100%;
       height: 48px;
-      padding-left: 13px;
+      padding: 0 13px;
       font-size: 14px;
       font-weight: 500;
       line-height: 48px;
       color: #000;
-      border-radius: 8px; }
+      border-radius: 0;
+      flex: 1;
+      background: none;
+      border: 0;
+      outline: 0; }
       .single_form_div .single_form_right .form_right_input input::-moz-placeholder {
         color: #AAA; }
       .single_form_div .single_form_right .form_right_input input::placeholder {
         color: #AAA; }
   .single_form_div .single_form_right .form_btn {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 13px;
-    transform: translateY(-50%);
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: 0 0; }
+    background-position: 0 0;
+    margin-right: 15px; }
     .single_form_div .single_form_right .form_btn.btn_clear {
       background-image: url("../images/login/btn_clear_input.png"); }
     .single_form_div .single_form_right .form_btn.btn_show {
@@ -3563,7 +3574,7 @@ input.props_dom {
   .info_col_wrap input {
     display: inline-block;
     width: 100%;
-    padding-left: 13px;
+    padding: 0 13px;
     height: 48px;
     border-radius: 8px;
     background-color: #fff;
@@ -3596,7 +3607,11 @@ input.props_dom {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #AAA; }
+    color: #000; }
+    .info_col_wrap .info_text_input::-moz-placeholder {
+      color: #AAA; }
+    .info_col_wrap .info_text_input::placeholder {
+      color: #AAA; }
     .info_col_wrap .info_text_input.short {
       width: 120px; }
   .info_col_wrap .info_select_wrap {
@@ -3611,7 +3626,7 @@ input.props_dom {
   .info_col_wrap .pay_opt_list {
     display: inline-block;
     width: 100%;
-    padding-left: 13px;
+    padding: 0 13px;
     height: 48px;
     font-size: 16px;
     font-weight: 400;
@@ -3642,9 +3657,9 @@ input.props_dom {
       color: #000;
       cursor: pointer; }
       .info_col_wrap .info_date_item input::-moz-placeholder {
-        color: #000; }
+        color: #aaa; }
       .info_col_wrap .info_date_item input::placeholder {
-        color: #000; }
+        color: #aaa; }
   .info_col_wrap .date_flow {
     display: inline-block;
     font-size: 16px;
@@ -3893,6 +3908,8 @@ input.props_dom {
     color: #005AAB; }
     .detail_tb th.detail_tb_logo {
       background-color: #fff; }
+  .detail_tb td > input {
+    max-width: 270px; }
   .detail_tb .tb_logo_wrap {
     display: flex;
     align-items: center;
@@ -3980,15 +3997,19 @@ input.props_dom {
   .detail_tb .tb_file_input {
     width: 100%;
     height: 100%;
-    padding-left: 13px;
+    padding: 0 13px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #AAA;
+    color: #000;
     border-radius: 8px;
     border: 0;
     background-color: #fff;
     text-align: left; }
+    .detail_tb .tb_file_input::-moz-placeholder {
+      color: #AAA; }
+    .detail_tb .tb_file_input::placeholder {
+      color: #AAA; }
   .detail_tb .tb_file_label {
     display: inline-block;
     -webkit-appearance: none;
@@ -4115,7 +4136,7 @@ input.props_dom {
   padding: 8px 16px;
   background: #fff; }
   .board_sort_row .search_cols .form_select {
-    min-width: 120px; }
+    min-width: 200px; }
 
 .sort_fraction_text {
   font-size: 13px;
