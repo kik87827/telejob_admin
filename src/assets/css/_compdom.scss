@@ -184,10 +184,14 @@ input.props_this_dom{
     max-width: 112px; position: relative; width: 100%; height: 48px; padding: 0 13px; @include font2(16px,400,1.5,#AAA); border-radius: 8px !important; background-color: #F8F8F8;
     &::placeholder {color: #aaa;}
 }
-.addr_search_input {width: 100%; height: 48px; padding: 0 24px; @include font2(14px,700,1.4,#595959); border-radius: 26px; border: 1px solid #E6E6E6; background-color: #F8F8F8;}
+.addr_search_input {width: 100%; height: 48px; display: flex; align-items: center; justify-content: center; @include font2(14px,700,1.4,#595959); border-radius: 26px; border: 1px solid #E6E6E6; background-color: #F8F8F8;}
 .addr_search_normal,
 .addr_search_detail {
-    max-width: 612px;position: relative; width: 100%; height: 48px; padding: 0 13px; @include font2(16px,400,1.5,#AAA); border-radius: 8px !important; background-color: #F8F8F8;
+    max-width: 612px; position: relative; width: 100%; height: 48px; display: flex; align-items: center; justify-content: center; @include font2(16px,400,1.5,#AAA); padding: 0 13px; border-radius: 8px !important; background-color: #F8F8F8;
+    &::placeholder {color: #aaa;}
+}
+.addr_search_disabled {
+    position: relative; width: 100%; height: 48px; display: flex; align-items: center; justify-content: center; padding: 0 13px; @include font2(16px,400,1.5,#AAA); border-radius: 8px !important; background-color: #F8F8F8;
     &::placeholder {color: #aaa;}
 }
 

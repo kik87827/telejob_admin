@@ -5034,7 +5034,9 @@ input.props_this_dom {
 .addr_search_input {
   width: 100%;
   height: 48px;
-  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.4;
@@ -5049,6 +5051,29 @@ input.props_this_dom {
   position: relative;
   width: 100%;
   height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #AAA;
+  padding: 0 13px;
+  border-radius: 8px !important;
+  background-color: #F8F8F8; }
+  .addr_search_normal::-moz-placeholder, .addr_search_detail::-moz-placeholder {
+    color: #aaa; }
+  .addr_search_normal::placeholder,
+  .addr_search_detail::placeholder {
+    color: #aaa; }
+
+.addr_search_disabled {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 13px;
   font-size: 16px;
   font-weight: 400;
@@ -5056,10 +5081,9 @@ input.props_this_dom {
   color: #AAA;
   border-radius: 8px !important;
   background-color: #F8F8F8; }
-  .addr_search_normal::-moz-placeholder, .addr_search_detail::-moz-placeholder {
+  .addr_search_disabled::-moz-placeholder {
     color: #aaa; }
-  .addr_search_normal::placeholder,
-  .addr_search_detail::placeholder {
+  .addr_search_disabled::placeholder {
     color: #aaa; }
 
 .brd_paging_row {
