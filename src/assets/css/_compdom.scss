@@ -174,5 +174,67 @@ input.props_this_dom{
     position: absolute; top: 50%; right: 53px; transform: translateY(-50%); @include spoca; @include font2(12px,400,1.3,#595959);
     > em {color: #000;}
 }
+.upload_file_noti {@include font2(13px,400,1.4,#595959);}
 
 .text_file_download {@include font2(16px,700,1.5,#005AAB); text-decoration: underline !important;}
+
+.addr_search_top {display: flex; align-items: center; gap: 8px; margin-bottom: 4px;}
+.addr_search_btm {display: flex; align-items: center; gap: 4px;}
+.addr_search_num {
+    max-width: 112px; position: relative; width: 100%; height: 48px; padding: 0 13px; @include font2(16px,400,1.5,#AAA); border-radius: 8px !important; background-color: #F8F8F8;
+    &::placeholder {color: #aaa;}
+}
+.addr_search_input {width: 100%; height: 48px; padding: 0 24px; @include font2(14px,700,1.4,#595959); border-radius: 26px; border: 1px solid #E6E6E6; background-color: #F8F8F8;}
+.addr_search_normal,
+.addr_search_detail {
+    max-width: 612px;position: relative; width: 100%; height: 48px; padding: 0 13px; @include font2(16px,400,1.5,#AAA); border-radius: 8px !important; background-color: #F8F8F8;
+    &::placeholder {color: #aaa;}
+}
+
+.brd_paging_row{
+    display:flex; justify-content: center; align-items:center; text-align:center; gap:5px; margin-top:24px;
+    .btn_paging_control{
+        width:32px;height:32px;display:flex; align-items:center; justify-content: center; text-align:center; border:1px solid #F1F1F1; border-radius:8px; @include bgicon_center(16px auto);
+        &.first{background-image:url("../images/ico_paging_first.png");}
+        &.prev{background-image:url("../images/ico_paging_prev.png");}
+        &.next{background-image:url("../images/ico_paging_next.png");}
+        &.last{background-image:url("../images/ico_paging_last.png");}
+    }
+    .paging_num_list {display:flex; justify-content: center; align-items:center; gap:5px;}
+    .btn_paging_num{
+        width:32px;height:32px;display:flex; align-items:center; justify-content: center; text-align:center; border-radius:8px; border:1px solid #F1F1F1; @include font(13px,500,1,0,#333333);
+        &.active{color:#fff;background-color:#0B51C5; border-color:#0B51C5;}
+    }
+}
+
+@media (max-width:$mobile){
+    .board_paging_row{
+        margin-top:24px;
+        .board_paging_row,
+        .paging_num_list{gap:3px;}
+    }
+}
+@media (max-width:$mobile_size3){
+    .board_paging_ro {
+        gap:2px;
+        .paging_num_list{gap:2px;}
+        .btn_paging_num,
+        .btn_paging_control{border-radius:5px;}
+    }
+}
+
+.board_tab_list {
+    display: flex; position: relative;
+    &:before {content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background-color: #005AAB;}
+}
+.board_tab_item {
+    z-index: 3; position: relative; display: flex; align-items: center; justify-content: center; width: 188px; height: 48px; @include font2(16px,700,1.5,#595959); background-color: #F8F8F8; border-radius: 16px 16px 0 0; border-bottom: 1px solid #0053C2;
+    &.active {color: #005AAB; background-color: #fff; border: 1px solid #005AAB; border-bottom-color: #F8F8F8;}
+}
+
+.dtl_btn_common {
+    display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 72px; @include font2(20px,700,1.4,#0B51C5); border-radius: 26px; border-width: 1px; border-style: solid; border-color: #0B51C5; background-color: #fff;
+    &.btn_t_black {border-color: #000; color: #000;}
+    &.btn_sm {padding: 0 36px;}
+    &.btn_b_blue {background-color: #0B51C5; color: #fff;}
+}
